@@ -1,0 +1,238 @@
+// VARIABLES
+$accent_color: green;
+$red: red;
+$nav_background: rgba(0, 0, 0, 0.817);
+$z-10: 10;
+
+
+// Mixin
+
+@mixin list{
+  list-style: none;
+  padding: 0;
+}
+
+@mixin flex_row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  }
+
+  @mixin flex_column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+
+    @mixin backgrondImg{
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @mixin overlay {
+      background-color: rgba(0, 0, 0, 0.329);
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      // z-index: 1;  
+      width: 100%;
+      height: 100%;
+    }
+    
+
+
+.nav_list{
+  @include list()
+}
+
+.nav_list{
+  padding: 2rem 1rem;
+}
+
+.app_logo{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.mobile_nav, .desktop_nav{
+  background-color: $nav_background;
+  color: white;
+}
+
+.desktop_nav{
+  display: none;
+}
+
+.mobile_nav{
+  @include flex_row;
+  padding: 10px 1rem;
+}
+
+.mobile_link_container.inactive{
+  display: none;
+}
+
+.mobile_link_container.active{
+  background-color: $nav_background;
+  color: white;
+  display: block;
+}
+
+.mobile_link_container.active .nav_link{
+padding-bottom: 2rem;
+}
+
+a:-webkit-any-link{
+  color: white;
+  text-decoration: none;
+}
+
+
+
+.Banner{
+  @include backgrondImg()
+}
+
+.Banner{
+  @include flex_column()
+}
+
+.Banner{
+  height: 100vh;
+  position: relative;
+}
+
+ .banner_header, .banner_text{
+  z-index: $z-10;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+.banner_text{
+  font-style: oblique;
+}
+
+.banner_header{
+  font-size: 2.7rem;
+}
+
+.Banner::before{
+  @include overlay()
+}
+
+.primary_btn{
+  background-color: $accent_color;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100px;
+  text-align: start;
+}
+
+.app_footer{
+ padding: 2rem 1rem;
+ text-align: justify;
+}
+
+.app_footer{
+  background-color: $nav_background;
+  color: white;
+}
+
+.footer_items{
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.footer_items h3{
+  padding-bottom: 10px;
+}
+
+.logo_text{
+  color: $accent_color;
+  font-style: oblique;
+}
+
+.footer_link_item{
+  padding-bottom: 10px;
+}
+
+.footer_link_container{
+  list-style-type: none;
+}
+
+.footer_link_item:hover{
+  color: $accent_color;
+}
+
+
+
+// .desktop_nav{
+//   @include flex_row
+// }
+
+
+
+@media screen and (min-width: 768px){
+.mobile_nav, .mobile_link_container, .mobile_link_container.active{
+  display: none;
+}
+
+.desktop_nav{
+  @include flex_row
+}
+
+.desktop_nav, .app_footer{
+  padding: 0.1rem 2rem;
+}
+
+.nav_list{
+  @include flex_row()
+}
+
+.primary_btn{
+  text-align: center;
+}
+
+.nav_link, a:-webkit-any-link{
+  padding: 0rem 1.2rem;
+
+}
+
+.banner_header{
+  font-size: 3.5rem;
+}
+
+.app_footer{
+display: flex;
+justify-content: space-between;
+align-items: start;
+padding-top: 2rem;
+}
+
+.banner_text{
+  font-size: 20px;
+}
+
+
+}
+
+
+@media screen and (min-width: 1024px){
+ 
+  .banner_header{
+    font-size: 5rem;
+  }
+
+  .banner_text{
+    font-size: 25px;
+  }
+  
+}
