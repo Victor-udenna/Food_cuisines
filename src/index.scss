@@ -3,6 +3,10 @@ $accent_color: green;
 $red: red;
 $nav_background: rgba(0, 0, 0, 0.817);
 $z-10: 10;
+$circle: 50%;
+$rounded-edge: 1rem;
+$light_green: rgb(119, 199, 119);
+$light_bg: honeydew ;
 
 
 // Mixin
@@ -10,6 +14,11 @@ $z-10: 10;
 @mixin list{
   list-style: none;
   padding: 0;
+}
+
+@mixin flex{
+  display: flex;
+  align-items: center;
 }
 
 @mixin flex_row{
@@ -26,6 +35,12 @@ $z-10: 10;
     flex-direction: column;
     }
 
+    @mixin flex_wrap{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
     @mixin backgrondImg{
       background-position: center;
@@ -46,6 +61,8 @@ $z-10: 10;
     
 
 
+
+
 .nav_list{
   @include list()
 }
@@ -57,7 +74,7 @@ $z-10: 10;
 .app_logo{
   width: 70px;
   height: 70px;
-  border-radius: 50%;
+  border-radius: $circle;
 }
 
 .mobile_nav, .desktop_nav{
@@ -134,6 +151,55 @@ a:-webkit-any-link{
   padding: 10px;
   width: 100px;
   text-align: start;
+}
+
+.Topfood_container{
+  padding: 10px 1rem;
+}
+
+.Topfood_header{
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.topfood_card{
+display: grid;
+grid-template-columns: 1fr 3fr;
+margin-bottom: 1.2rem;
+align-items: center;
+padding: 0.5rem;
+border: 1px solid $light_green;
+background-color: honeydew;
+border-radius: $rounded-edge;
+max-width: 400px;
+height: 100px;
+}
+
+.topfood_imgcontainer{
+  width: 85%;
+  align-items: center;
+}
+
+.topfood_img{
+  width: 100%;
+  border-radius: $rounded-edge;
+}
+
+.topfood_title{
+  color: $accent_color;
+  padding-bottom: 0.7rem;
+}
+
+.topfood_detail{
+@include flex()
+}
+
+.topfood_difficulty{
+  padding-right: 20px;
+}
+
+.Topfood_cardcontainer{
+@include flex_wrap()
 }
 
 .app_footer{
@@ -221,6 +287,10 @@ padding-top: 2rem;
   font-size: 20px;
 }
 
+.Topfood_header{
+  margin-bottom: 2.3rem;
+}
+
 
 }
 
@@ -235,4 +305,10 @@ padding-top: 2rem;
     font-size: 25px;
   }
   
+  .Topfood_header{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+
 }
