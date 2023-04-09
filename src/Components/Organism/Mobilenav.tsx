@@ -3,6 +3,7 @@ import logo from "../../assets/images/logo (1).png"
 import hambergerbtn from "../../assets/images/hamburger_menu.svg"
 import { Navlist } from '../Molecule/Navlist';
 import cancel from "../../assets/images/x.svg";
+import { Link } from 'react-router-dom';
 
 export const MobileNav = () => {
 
@@ -14,8 +15,8 @@ setdropdown(!dropdown)
   return (
 <Fragment>
 <nav className='mobile_nav'>
-<div><img src={logo} width="50px" className='app_logo' alt='logo'/>
-<p>Cuisine</p></div>
+<div><Link to="/"><img src={logo} width="50px" className='app_logo' alt='logo'/>
+<p className='logo_text center'>Kuisine</p></Link></div>
 <div>
 {!dropdown ? <img src={hambergerbtn} onClick={handleDropdown}/>
  : <img src={cancel} onClick={handleDropdown}/> }

@@ -7,6 +7,9 @@ $circle: 50%;
 $rounded-edge: 1rem;
 $light_green: rgb(119, 199, 119);
 $light_bg: honeydew ;
+$light_orange: rgb(255, 222, 161);
+$orange_border: rgb(255, 183, 50);
+$orange: orange;
 
 
 // Mixin
@@ -58,8 +61,6 @@ $light_bg: honeydew ;
       width: 100%;
       height: 100%;
     }
-    
-
 
 
 
@@ -133,6 +134,7 @@ a:-webkit-any-link{
 }
 .banner_text{
   font-style: oblique;
+  color: $orange;
 }
 
 .banner_header{
@@ -172,16 +174,24 @@ border: 1px solid $light_green;
 background-color: honeydew;
 border-radius: $rounded-edge;
 max-width: 400px;
-height: 100px;
+width: 100%;
+height: 110px;
+}
+
+.topfood_card:hover{
+  // background-color: $light_orange;x
+  border: 1px solid $orange_border;
 }
 
 .topfood_imgcontainer{
   width: 85%;
+  height: 60px;
   align-items: center;
 }
 
 .topfood_img{
   width: 100%;
+  height: 100%;
   border-radius: $rounded-edge;
 }
 
@@ -224,6 +234,7 @@ height: 100px;
 .logo_text{
   color: $accent_color;
   font-style: oblique;
+padding-left: 10px;
 }
 
 .footer_link_item{
