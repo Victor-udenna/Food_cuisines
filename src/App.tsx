@@ -9,7 +9,7 @@ import { Home } from './Components/Page/Home'
 import { Mexicanfood } from './Components/Page/Mexicanfood'
 import { Chinesepage } from './Components/Page/Chinesepage';
 import { Cocktailpage } from './Components/Page/Cocktailpage'
-import { Recipepage } from './Components/Page/Recipepage'
+import { Veganpage } from './Components/Page/Veganpage'
 
 function App() {
 
@@ -21,9 +21,9 @@ function App() {
 <Routes>
   <Route path='/' element={<Home/>}/>
   <Route path='/Mexicanfood' element={<Mexicanfood/>} />
-  <Route path='/Pizzapage' element={<Chinesepage/>}/>
+  <Route path='/Chinesepage' element={<Chinesepage/>}/>
   <Route path='/Cocktail' element={<Cocktailpage/>}/>
-  <Route path='/Recipepage' element={<Recipepage/>}/>
+  <Route path='/Veganpage' element={<Veganpage/>}/>
 </Routes>
 </BrowserRouter>
 </Fragment>

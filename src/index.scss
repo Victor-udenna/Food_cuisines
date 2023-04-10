@@ -6,146 +6,143 @@ $z-10: 10;
 $circle: 50%;
 $rounded-edge: 1rem;
 $light_green: rgb(119, 199, 119);
-$light_bg: honeydew ;
+$light_bg: honeydew;
 $light_orange: rgb(255, 222, 161);
 $orange_border: rgb(255, 183, 50);
 $orange: orange;
 
-
 // Mixin
 
-@mixin list{
+@mixin list {
   list-style: none;
   padding: 0;
 }
 
-@mixin flex{
+@mixin flex {
   display: flex;
   align-items: center;
 }
 
-@mixin flex_row{
+@mixin flex_row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  }
-
-  @mixin flex_column{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    }
-
-    @mixin flex_wrap{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    @mixin backgrondImg{
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    @mixin overlay {
-      background-color: rgba(0, 0, 0, 0.329);
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      // z-index: 1;  
-      width: 100%;
-      height: 100%;
-    }
-
-
-
-.nav_list{
-  @include list()
 }
 
-.nav_list{
+@mixin flex_column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin flex_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin backgrondImg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin overlay {
+  background-color: rgba(0, 0, 0, 0.329);
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  // z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.nav_list {
+  @include list();
+}
+
+.nav_list {
   padding: 2rem 1rem;
 }
 
-.app_logo{
+.app_logo {
   width: 70px;
   height: 70px;
   border-radius: $circle;
 }
 
-.mobile_nav, .desktop_nav{
+.mobile_nav,
+.desktop_nav {
   background-color: $nav_background;
   color: white;
 }
 
-.desktop_nav{
+.desktop_nav {
   display: none;
 }
 
-.mobile_nav{
+.mobile_nav {
   @include flex_row;
   padding: 10px 1rem;
 }
 
-.mobile_link_container.inactive{
+.mobile_link_container.inactive {
   display: none;
 }
 
-.mobile_link_container.active{
+.mobile_link_container.active {
   background-color: $nav_background;
   color: white;
   display: block;
 }
 
-.mobile_link_container.active .nav_link{
-padding-bottom: 2rem;
+.mobile_link_container.active .nav_link {
+  padding-bottom: 2rem;
 }
 
-a:-webkit-any-link{
+a:-webkit-any-link {
   color: white;
   text-decoration: none;
 }
 
-
-
-.Banner{
-  @include backgrondImg()
+.Banner {
+  @include backgrondImg();
 }
 
-.Banner{
-  @include flex_column()
+.Banner {
+  @include flex_column();
 }
 
-.Banner{
+.Banner {
   height: 100vh;
   position: relative;
 }
 
- .banner_header, .banner_text{
+.banner_header,
+.banner_text {
   z-index: $z-10;
   color: white;
   text-align: center;
   position: relative;
 }
-.banner_text{
+.banner_text {
   font-style: oblique;
   color: $orange;
 }
 
-.banner_header{
+.banner_header {
   font-size: 2.7rem;
 }
 
-.Banner::before{
-  @include overlay()
+.Banner::before {
+  @include overlay();
 }
 
-.primary_btn{
+.primary_btn {
   background-color: $accent_color;
   color: white;
   border: 0;
@@ -155,254 +152,217 @@ a:-webkit-any-link{
   text-align: start;
 }
 
-
-.Topfood_container{
+.Topfood_container {
   padding: 10px 1rem;
 }
 
-.Topfood_header{
+.Topfood_header {
   margin-top: 1.5rem;
   margin-bottom: 2rem;
 }
 
-.topfood_card{
-display: grid;
-grid-template-columns: 1fr 3fr;
-margin-bottom: 1.2rem;
-align-items: center;
-padding: 0.5rem;
-border: 1px solid $light_green;
-background-color: honeydew;
-border-radius: $rounded-edge;
-max-width: 400px;
-width: 100%;
-height: 110px;
+.topfood_card {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin-bottom: 1.2rem;
+  align-items: center;
+  padding: 0.5rem;
+  border: 1px solid $light_green;
+  background-color: honeydew;
+  border-radius: $rounded-edge;
+  max-width: 400px;
+  width: 100%;
+  height: 110px;
 }
 
-.topfood_card:hover{
+.topfood_card:hover {
   border: 1px solid $orange_border;
 }
 
-.topfood_imgcontainer{
+.topfood_imgcontainer {
   width: 85%;
   height: 60px;
   align-items: center;
 }
 
-.topfood_img{
+.topfood_img {
   width: 100%;
   height: 100%;
   border-radius: $rounded-edge;
 }
 
-.topfood_title{
+.topfood_title {
   color: $accent_color;
   padding-bottom: 0.7rem;
 }
 
-.topfood_detail{
-@include flex()
+.topfood_detail {
+  @include flex();
 }
 
-.topfood_difficulty{
+.topfood_difficulty {
   padding-right: 20px;
 }
 
-.Topfood_cardcontainer{
-@include flex_wrap()
+.Topfood_cardcontainer {
+  @include flex_wrap();
 }
 
-
-.recipe_header{
+.recipe_header {
   color: $accent_color;
 }
 
-.mexican_page{
+.mexican_page {
   position: relative;
 }
 
-.card_container{
-  @include flex_wrap()
+.card_container {
+  @include flex_wrap();
 }
 
-.card_container, .food_header{
+.card_container,
+.food_header {
   padding: 10px 1rem;
 }
 
-.card{
-@include flex()
+.card {
+  @include flex();
 }
 
-.card{
-  // background-color: $accent_color;
+.card {
   background: honeydew;
   padding: 0px 10px 0px 0px;
   font-size: 14px;
+  width: 100%;
   border-radius: $rounded-edge;
   height: 150px;
   border: 1px solid $light_green;
   max-width: 400px;
   margin-bottom: 1.2rem;
 
-  .recipe_img{
+  .recipe_img {
     width: 120px;
     height: 148px;
     align-items: center;
-  border-radius: $rounded-edge  0 0 $rounded-edge;
-  margin-right: 10px;
+    border-radius: $rounded-edge 0 0 $rounded-edge;
+    margin-right: 10px;
   }
-  .time{
-    @include flex()
-  }
-  .time, .title{
+  .title, .food_id {
     padding: 6px 0;
     font-weight: bold;
   }
 
-  .time{
-    font-size: 10px;
-  }
-  
-  .title{
+  .title {
     font-size: 20px;
     color: $accent_color;
   }
 
-  .method{
-    display: none;
+  .download:hover {
+    color: $orange;
   }
-.ingridients{
-  display: none;
 }
 
-.desc{
-  display: none;
+.app_footer {
+  padding: 2rem 1rem;
+  text-align: justify;
 }
 
-
-.download{
-color: $accent_color;
-border: 0;
-width: 20px;
-height: 20px;
-background-color: inherit;
-}
-
-.download:hover{
-  color: $orange;
-}
-
-}
-
-
-.app_footer{
- padding: 2rem 1rem;
- text-align: justify;
-}
-
-.app_footer{
+.app_footer {
   background-color: $nav_background;
   color: white;
 }
 
-.footer_items{
+.footer_items {
   padding-bottom: 2rem;
   padding-top: 1rem;
 }
 
-.footer_items h3{
+.footer_items h3 {
   padding-bottom: 10px;
 }
 
-.logo_text{
+.logo_text {
   color: $accent_color;
   font-style: oblique;
-padding-left: 10px;
+  padding-left: 10px;
 }
 
-.footer_link_item{
+.footer_link_item {
   padding-bottom: 10px;
 }
 
-.footer_link_container{
+.footer_link_container {
   list-style-type: none;
 }
 
-.footer_link_item:hover{
+.footer_link_item:hover {
   color: $accent_color;
 }
-
-
 
 // .desktop_nav{
 //   @include flex_row
 // }
 
+@media screen and (min-width: 768px) {
+  .mobile_nav,
+  .mobile_link_container,
+  .mobile_link_container.active {
+    display: none;
+  }
 
+  .desktop_nav {
+    @include flex_row;
+  }
 
-@media screen and (min-width: 768px){
-.mobile_nav, .mobile_link_container, .mobile_link_container.active{
-  display: none;
+  .desktop_nav,
+  .app_footer {
+    padding: 0.1rem 2rem;
+  }
+
+  .nav_list {
+    @include flex_row();
+  }
+
+  .primary_btn {
+    text-align: center;
+  }
+
+  .nav_link,
+  a:-webkit-any-link {
+    padding: 0rem 1.2rem;
+  }
+
+  .banner_header {
+    font-size: 3.5rem;
+  }
+
+  .app_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 2rem;
+  }
+
+  .banner_text {
+    font-size: 20px;
+  }
+
+  .Topfood_header {
+    margin-bottom: 2.3rem;
+  }
 }
 
-.desktop_nav{
-  @include flex_row
-}
-
-.desktop_nav, .app_footer{
-  padding: 0.1rem 2rem;
-}
-
-.nav_list{
-  @include flex_row()
-}
-
-.primary_btn{
-  text-align: center;
-}
-
-.nav_link, a:-webkit-any-link{
-  padding: 0rem 1.2rem;
-
-}
-
-.banner_header{
-  font-size: 3.5rem;
-}
-
-.app_footer{
-display: flex;
-justify-content: space-between;
-align-items: start;
-padding-top: 2rem;
-}
-
-.banner_text{
-  font-size: 20px;
-}
-
-.Topfood_header{
-  margin-bottom: 2.3rem;
-}
-
-
-}
-
-
-@media screen and (min-width: 1024px){
- 
-  .banner_header{
+@media screen and (min-width: 1024px) {
+  .banner_header {
     font-size: 5rem;
   }
 
-  .banner_text{
+  .banner_text {
     font-size: 25px;
   }
-  
-  .Topfood_header{
+
+  .Topfood_header {
     margin-top: 2rem;
     margin-bottom: 3rem;
   }
-
-
 }
