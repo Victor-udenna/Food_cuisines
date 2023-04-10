@@ -5,6 +5,8 @@ import { Footer } from '../Template/Footer'
 import { Topvegan } from '../Template/Topvegan';
 import fooddata from "../../data/Topfood.json";
 import { FoodCard } from '../Template/FoodCard';
+import { DownloadInput } from '../Organism/DownloadInput';
+
 
 export const Veganpage = () => {
 
@@ -32,6 +34,7 @@ let veganfood = fooddata.Vegan_food;
             )
           })}
         </div>
+        <DownloadInput/>
         </section>
  <Footer/>
   </Fragment>

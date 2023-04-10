@@ -219,6 +219,9 @@ a:-webkit-any-link {
 .card_container {
   @include flex_wrap();
 }
+.card_container{
+  position: relative ;
+}
 
 .card_container,
 .food_header {
@@ -299,6 +302,47 @@ a:-webkit-any-link {
   color: $accent_color;
 }
 
+.download_container{
+  width: 320px;
+  background-color: rgba(14, 13, 71, 0.368);
+  padding: 10px;
+  border-radius: 20px;
+  border: 20px;
+  display: flex;
+  margin-bottom: 20px;
+  position: sticky;
+  bottom: 10px;
+  left: 5%;
+  margin: auto;
+  bottom: 10px;
+}
+
+input{
+  flex: 5;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 5px;
+  border: none;
+}
+
+.download_btn{
+  transition: .3s;
+  font-size: 1.2rem;
+  padding: 12px 10px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  /* flex: 1; */
+  background-color: $orange;
+  box-shadow: 0px 0px 3px #ffab04;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50%;
+}
+
+
 // .desktop_nav{
 //   @include flex_row
 // }
@@ -350,6 +394,19 @@ a:-webkit-any-link {
   .Topfood_header {
     margin-bottom: 2.3rem;
   }
+
+  .download_container{
+    width: 350px;
+    left: 28%;
+
+}
+
+.download_btn{
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+}
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -365,4 +422,17 @@ a:-webkit-any-link {
     margin-top: 2rem;
     margin-bottom: 3rem;
   }
+
+  .download_container{
+    width: 380px;
+    left: 50%;
 }
+
+.download_btn{
+  width: 70px;
+  height: 70px;
+  font-size: 22px;
+}
+
+}
+

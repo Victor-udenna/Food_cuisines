@@ -4,7 +4,8 @@ import { Banner } from '../Template/Banner'
 import { Footer } from '../Template/Footer'
 import { Topchinese } from '../Template/Topchinese'
 import fooddata from '../../data/Topfood.json';
-import { FoodCard } from '../Template/FoodCard'
+import { FoodCard } from '../Template/FoodCard';
+import { DownloadInput } from '../Organism/DownloadInput'
 
 
 export const Chinesepage = () => {
@@ -18,7 +19,7 @@ export const Chinesepage = () => {
         text='Nǐ xǐhuān chī shénme? 你喜欢吃什么？'
         styles={{backgroundImage: `url(https://images.unsplash.com/photo-1525755662778-989d0524087e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2hpbmVzZSUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60)`}}/>
         <Topchinese/>
-        <section>
+        <section className=''>
           <h3>Our chinese Recipes</h3>
         <div className="card_container">
           {chinesfood?.map((item)=>{
@@ -33,6 +34,7 @@ export const Chinesepage = () => {
             )
           })}
         </div>
+<DownloadInput/>
         </section>
         <Footer/>
     </Fragment>
