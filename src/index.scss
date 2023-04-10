@@ -155,6 +155,7 @@ a:-webkit-any-link{
   text-align: start;
 }
 
+
 .Topfood_container{
   padding: 10px 1rem;
 }
@@ -179,7 +180,6 @@ height: 110px;
 }
 
 .topfood_card:hover{
-  // background-color: $light_orange;x
   border: 1px solid $orange_border;
 }
 
@@ -211,6 +211,89 @@ height: 110px;
 .Topfood_cardcontainer{
 @include flex_wrap()
 }
+
+
+.recipe_header{
+  color: $accent_color;
+}
+
+.mexican_page{
+  position: relative;
+}
+
+.card_container{
+  @include flex_wrap()
+}
+
+.card_container, .food_header{
+  padding: 10px 1rem;
+}
+
+.card{
+@include flex()
+}
+
+.card{
+  // background-color: $accent_color;
+  background: honeydew;
+  padding: 0px 10px 0px 0px;
+  font-size: 14px;
+  border-radius: $rounded-edge;
+  height: 150px;
+  border: 1px solid $light_green;
+  max-width: 400px;
+  margin-bottom: 1.2rem;
+
+  .recipe_img{
+    width: 120px;
+    height: 148px;
+    align-items: center;
+  border-radius: $rounded-edge  0 0 $rounded-edge;
+  margin-right: 10px;
+  }
+  .time{
+    @include flex()
+  }
+  .time, .title{
+    padding: 6px 0;
+    font-weight: bold;
+  }
+
+  .time{
+    font-size: 10px;
+  }
+  
+  .title{
+    font-size: 20px;
+    color: $accent_color;
+  }
+
+  .method{
+    display: none;
+  }
+.ingridients{
+  display: none;
+}
+
+.desc{
+  display: none;
+}
+
+
+.download{
+color: $accent_color;
+border: 0;
+width: 20px;
+height: 20px;
+background-color: inherit;
+}
+
+.download:hover{
+  color: $orange;
+}
+
+}
+
 
 .app_footer{
  padding: 2rem 1rem;

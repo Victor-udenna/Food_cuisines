@@ -12,7 +12,7 @@ export const Footer = () => {
     <h3>Location</h3>
     <ul className='footer_link_container'>
     <li className='footer_link_item'>Kuisiene</li>
-    <li className='footer_link_item'>omole phase 1, ikeja</li>
+    <li className='footer_link_item'>Omole phase 1, ikeja</li>
     <li className='footer_link_item'>Lagos, Nigeria</li>
     </ul>
 </div>

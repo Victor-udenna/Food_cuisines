@@ -8,7 +8,7 @@ export const Topcocktail = () => {
   let topcocktail = Topfooddata.topcocktail;
   return (
     <div className='Topfood_container'>
-    <h2 className='Topfood_header'>Our Top Mexican food</h2>
+    <h2 className='Topfood_header'>Our Top cocktail drinks </h2>
 <div className='Topfood_cardcontainer'>
   {topcocktail.map((item)=>{
 return(
