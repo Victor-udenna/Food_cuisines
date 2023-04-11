@@ -37,8 +37,9 @@ export const Mexicanfood = () => {
                 />
               )
             })}
+             <DownloadInput/>
             </div>
-            <DownloadInput/>
+    
         </section>  
       </main>
       <Footer />

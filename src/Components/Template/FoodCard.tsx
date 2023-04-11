@@ -1,13 +1,8 @@
 import React, { Fragment} from 'react';
 
-type foodProp = {
-  image: string
-  title: string
-  id: string
-  difficulty: string
-}
+import { dataType } from '../../types/datatypes';
 
-export const FoodCard = (props: foodProp) => {
+export const FoodCard = (props: dataType) => {
   return (
   <Fragment>
         

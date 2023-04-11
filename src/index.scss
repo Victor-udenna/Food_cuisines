@@ -153,7 +153,7 @@ a:-webkit-any-link {
 }
 
 .Topfood_container {
-  padding: 10px 1rem;
+  padding: 10px 1.5rem;
 }
 
 .Topfood_header {
@@ -208,6 +208,8 @@ a:-webkit-any-link {
   @include flex_wrap();
 }
 
+
+
 .recipe_header {
   color: $accent_color;
 }
@@ -223,10 +225,13 @@ a:-webkit-any-link {
   position: relative ;
 }
 
-.card_container,
-.food_header {
-  padding: 10px 1rem;
+.card_container{
+ padding: 1.5rem;
 }
+.food_header {
+  padding: 2rem;
+}
+
 
 .card {
   @include flex();
@@ -234,18 +239,19 @@ a:-webkit-any-link {
 
 .card {
   background: honeydew;
-  padding: 0px 10px 0px 0px;
+  padding: 3px 10px 1px 0px;
   font-size: 14px;
   width: 100%;
   border-radius: $rounded-edge;
   height: 150px;
   border: 1px solid $light_green;
-  max-width: 400px;
-  margin-bottom: 1.2rem;
+  max-width: 350px;
+  margin-bottom: 2.4rem;
 
   .recipe_img {
     width: 120px;
-    height: 148px;
+    height: fit-content;
+    margin-top: 2px;
     align-items: center;
     border-radius: $rounded-edge 0 0 $rounded-edge;
     margin-right: 10px;
@@ -266,7 +272,7 @@ a:-webkit-any-link {
 }
 
 .app_footer {
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
   text-align: justify;
 }
 
@@ -333,7 +339,6 @@ input{
   width: 50px;
   height: 50px;
   text-align: center;
-  /* flex: 1; */
   background-color: $orange;
   box-shadow: 0px 0px 3px #ffab04;
   cursor: pointer;
@@ -341,11 +346,6 @@ input{
   border: none;
   border-radius: 50%;
 }
-
-
-// .desktop_nav{
-//   @include flex_row
-// }
 
 @media screen and (min-width: 768px) {
   .mobile_nav,
@@ -360,7 +360,7 @@ input{
 
   .desktop_nav,
   .app_footer {
-    padding: 0.1rem 2rem;
+    padding: 0.1rem 3rem;
   }
 
   .nav_list {
@@ -373,7 +373,7 @@ input{
 
   .nav_link,
   a:-webkit-any-link {
-    padding: 0rem 1.2rem;
+    padding: 0rem 0rem 0rem 2rem;
   }
 
   .banner_header {
@@ -407,6 +407,12 @@ input{
   font-size: 18px;
 }
 
+.card_container{
+  padding: 2.4rem;
+ }
+ .food_header, .Topfood_container {
+   padding: 2.4rem;
+ }
 }
 
 @media screen and (min-width: 1024px) {
@@ -433,6 +439,14 @@ input{
   height: 70px;
   font-size: 22px;
 }
+
+.card_container .Topfood_cardcontainer{
+  padding: 3.4rem;
+ }
+ .food_header {
+   padding: 3.4rem;
+   font-size: 2.3rem;
+ }
 
 }
 

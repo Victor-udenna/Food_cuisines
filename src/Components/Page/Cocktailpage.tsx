@@ -4,9 +4,14 @@ import { Banner } from '../Template/Banner'
 import { Footer } from '../Template/Footer'
 import axios from 'axios'
 import { Topcocktail } from '../Template/Topcocktail'
+import { FoodCard } from '../Template/FoodCard';
+import { DownloadInput } from '../Organism/DownloadInput'
+import fooddata from "../../data/Topfood.json"
 
 export const Cocktailpage = () => {
   
+let allcocktail = fooddata.all_cocktail;
+
   return (
   <Fragment>
     <Navbar/>
@@ -15,9 +20,23 @@ export const Cocktailpage = () => {
     text='...sip'
     styles={{backgroundImage: `url(https://images.unsplash.com/photo-1570598912132-0ba1dc952b7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y29ja3RhaWx8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60)`}}/>
     <Topcocktail/>
-    <div className="card_container">
-    
-    </div>
+    <section>
+    <h2 className='food_header'>Our Cocktails Recipes</h2>
+        <div className="card_container">
+          {allcocktail?.map((item)=>{
+            return(
+          <FoodCard
+          key={item.id}
+          title={item.title}
+          difficulty={item.difficulty}
+          image={item.image}
+          id={item.id}
+          />
+            )
+          })}
+        </div>
+        <DownloadInput/>
+        </section>
     <Footer/>
   </Fragment>
   )
