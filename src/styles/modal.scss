@@ -99,12 +99,14 @@ $overlay: rgba(0, 0, 0, 0.402);
         border-radius: 1.4rem 1.4rem  0px 0px;
         height: 90vh;
         text-align: center;
-        
-    .premium_text{
-        color: $accent_color;
-        text-decoration: underline;
-        cursor: pointer;
     }
+
+    .modal_btn{
+        background-color: $accent_color;
+        color: white;
+        border: 0;
+        padding: 10px;
+        border-radius: $rounded-edge;
     }
 
     .modal_img{
@@ -117,10 +119,26 @@ $overlay: rgba(0, 0, 0, 0.402);
     .modal_title{
         margin-top: 10px;
         margin-bottom: 10px;
+        font-size: 1.5rem;
+        color: $accent_color;
+        margin: 1rem 0 1rem 0;
     }
 
+    .premium_text{
+        color: $accent_color;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+  .modal_message{
+    margin: 1rem 0;
+  }
 
 }
+
+.card{
+    position: relative;
+}
+
 
 
 
@@ -130,7 +148,16 @@ $overlay: rgba(0, 0, 0, 0.402);
         // align-items: center;
         color: red($color: #000000);
       }
+
+      .modal_title{
+        font-size: 2.3rem;
+      }
 }
+}
+
+
+@media screen and (min-width: 1024px) {
+    
 }
 
 

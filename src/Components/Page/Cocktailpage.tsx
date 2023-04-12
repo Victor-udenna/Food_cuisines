@@ -5,7 +5,6 @@ import { Footer } from '../Template/Footer'
 import axios from 'axios'
 import { Topcocktail } from '../Template/Topcocktail'
 import { FoodCard } from '../Template/FoodCard';
-import { DownloadInput } from '../Organism/DownloadInput'
 import fooddata from "../../data/Topfood.json"
 
 export const Cocktailpage = () => {
@@ -31,12 +30,10 @@ let allcocktail = fooddata.all_cocktail;
                 title={item.title}
                 difficulty={item.difficulty}
                 image={item.image}
-                id={item.id}
                 />
                   )
             }
-          })}
-           <DownloadInput/>    
+          })} 
         </div>
         </section>
     <Footer/>

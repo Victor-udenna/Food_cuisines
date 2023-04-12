@@ -5,7 +5,6 @@ import { Footer } from "../Template/Footer";
 import { TopMexican } from "../Template/TopMexican";
 import { FoodCard } from "../Template/FoodCard";
 import fooddata from "../../data/Topfood.json";
-import { DownloadInput } from "../Organism/DownloadInput";
 
 export const Mexicanfood = () => {
   let allmexican = fooddata.allmexican_food;
@@ -32,13 +31,11 @@ export const Mexicanfood = () => {
                     key={items.id}
                     title={items.title}
                     difficulty={items.difficulty}
-                    id={items.id}
                     image={items.image}
                   />
                 );
               }
             })}
-            <DownloadInput />
           </div>
         </section>
       </main>

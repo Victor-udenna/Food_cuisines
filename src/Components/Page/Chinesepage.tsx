@@ -6,7 +6,6 @@ import { Footer } from '../Template/Footer'
 import { Topchinese } from '../Template/Topchinese'
 // import fooddata from '../../data/Topfood.json';
 import { FoodCard } from '../Template/FoodCard';
-import { DownloadInput } from '../Organism/DownloadInput';
 // import { dataType } from '../../types/datatypes';
 import { useQuery } from 'react-query';
 
@@ -59,14 +58,12 @@ if ( i <= 30){
     title={item.title}
     difficulty={item.difficulty}
     image={item.image}
-    id={item.id}
     />
       )
 }
           })}
           { status === "loading" && <div>loading....</div>}
           { status === "error" && <div>An error occured</div>}
-          <DownloadInput/>
         </div>
         </section>
         <Footer/>
