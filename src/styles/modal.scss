@@ -144,11 +144,10 @@ $overlay: rgba(0, 0, 0, 0.402);
 
 @media screen and (min-width: 768px){
 .card.active{
-    .modal_container{
-        // align-items: center;
-        color: red($color: #000000);
-      }
 
+    .modal{
+        padding: 10px;
+    }
       .modal_title{
         font-size: 2.3rem;
       }
