@@ -1,7 +1,8 @@
 import React, { Fragment, useState} from 'react';
-
 import { dataType } from '../../types/datatypes';
 import  '../../styles/modal.scss';
+import { CgLoadbar } from 'react-icons/cg';
+import { Primarybutton } from '../Atom/Primarybutton';
 
 export const FoodCard = (props: dataType) => {
 
@@ -23,9 +24,14 @@ console.log(modal)
     </div>
 
 
+
     <div className='modal_container'>
 <div className='modal'>
-  my name
+<span className='modal_bar'><CgLoadbar size={40}/></span>
+ <div><img src={props.image} className='modal_img'/></div>
+ <h3 className='modal_title'>{props.title}</h3>
+ <p>Want to veiw recipe detail ? <span className='premium_text'> get premium</span></p>
+<Primarybutton text='Download recipe'/>
 </div>
     </div>
     </div>

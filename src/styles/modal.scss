@@ -10,6 +10,7 @@ $light_bg: honeydew;
 $light_orange: rgb(255, 222, 161);
 $orange_border: rgb(255, 183, 50);
 $orange: orange;
+$overlay: rgba(0, 0, 0, 0.402);
 
 // Mixin
 
@@ -69,7 +70,67 @@ $orange: orange;
 
 
 .card.active{
+    position: relative;
     .modal_container{
         display: block;
+        width: 100%;
+        background-color: $overlay;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: end;
     }
+
+    .modal_bar{
+        color: grayscale($color: #c9c9c9);
+    }
+
+    .modal{
+        width: 200px;
+        background-color: white;
+        width: 100%;
+        border-radius: 1.4rem 1.4rem  0px 0px;
+        height: 90vh;
+        text-align: center;
+        
+    .premium_text{
+        color: $accent_color;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    }
+
+    .modal_img{
+        margin: 10px;
+        width: 250px;
+        height: 250px;
+        border-radius: $circle;
+    }
+
+    .modal_title{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+
 }
+
+
+
+@media screen and (min-width: 768px){
+.card.active{
+    .modal_container{
+        // align-items: center;
+        color: red($color: #000000);
+      }
+}
+}
+
+
