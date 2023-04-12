@@ -35,11 +35,11 @@ const getchinese =()=>{
     console.error(error);
   });
 }
-
-  const {data, status} = useQuery("food", getchinese);
+  const {data, status} = useQuery(["food"], getchinese, {
+    staleTime: 20 * (60 * 1000),      // staletime
+  });
   console.log(status)
   console.log(data)
-
   return (
     <Fragment>
         <Navbar/>
@@ -51,21 +51,23 @@ const getchinese =()=>{
         <section className=''>
           <h2 className='food_header'>Our chinese Recipes</h2>
         <div className="card_container">
-          {  status === 'success' && foodData?.map((item: any)=>{
-            return(
-          <FoodCard
-          key={item.id}
-          title={item.title}
-          difficulty={item.difficulty}
-          image={item.image}
-          id={item.id}
-          />
-            )
+          {  status === 'success' && foodData?.map((item: any, i:number)=>{
+if ( i <= 30){
+  return(
+    <FoodCard
+    key={item.id}
+    title={item.title}
+    difficulty={item.difficulty}
+    image={item.image}
+    id={item.id}
+    />
+      )
+}
           })}
           { status === "loading" && <div>loading....</div>}
           { status === "error" && <div>An error occured</div>}
+          <DownloadInput/>
         </div>
-<DownloadInput/>
         </section>
         <Footer/>
     </Fragment>

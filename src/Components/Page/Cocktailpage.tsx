@@ -23,19 +23,21 @@ let allcocktail = fooddata.all_cocktail;
     <section>
     <h2 className='food_header'>Our Cocktails Recipes</h2>
         <div className="card_container">
-          {allcocktail?.map((item)=>{
-            return(
-          <FoodCard
-          key={item.id}
-          title={item.title}
-          difficulty={item.difficulty}
-          image={item.image}
-          id={item.id}
-          />
-            )
+          {allcocktail?.map((item: any, i: number)=>{
+            if( i < 30){
+              return(
+                <FoodCard
+                key={item.id}
+                title={item.title}
+                difficulty={item.difficulty}
+                image={item.image}
+                id={item.id}
+                />
+                  )
+            }
           })}
+           <DownloadInput/>    
         </div>
-        <DownloadInput/>
         </section>
     <Footer/>
   </Fragment>

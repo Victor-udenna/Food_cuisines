@@ -8,7 +8,6 @@ import fooddata from "../../data/Topfood.json";
 import { DownloadInput } from "../Organism/DownloadInput";
 
 export const Mexicanfood = () => {
-
   let allmexican = fooddata.allmexican_food;
 
   return (
@@ -26,21 +25,22 @@ export const Mexicanfood = () => {
         <section>
           <h2 className="food_header">Our Mexican recipes</h2>
           <div className="card_container">
-            { allmexican?.map((items)=>{
-              return(
-                <FoodCard
-                key={items.id}
-                title={items.title}
-                difficulty={items.difficulty}
-                id={items.id}
-                image={items.image}
-                />
-              )
+            {allmexican?.map((items, i) => {
+              if (i < 30) {
+                return (
+                  <FoodCard
+                    key={items.id}
+                    title={items.title}
+                    difficulty={items.difficulty}
+                    id={items.id}
+                    image={items.image}
+                  />
+                );
+              }
             })}
-             <DownloadInput/>
-            </div>
-    
-        </section>  
+            <DownloadInput />
+          </div>
+        </section>
       </main>
       <Footer />
     </Fragment>

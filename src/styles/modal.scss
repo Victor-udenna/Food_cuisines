@@ -1,0 +1,75 @@
+// VARIABLES
+$accent_color: green;
+$red: red;
+$nav_background: rgba(0, 0, 0, 0.817);
+$z-10: 10;
+$circle: 50%;
+$rounded-edge: 1rem;
+$light_green: rgb(119, 199, 119);
+$light_bg: honeydew;
+$light_orange: rgb(255, 222, 161);
+$orange_border: rgb(255, 183, 50);
+$orange: orange;
+
+// Mixin
+
+@mixin list {
+  list-style: none;
+  padding: 0;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@mixin flex_column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin flex_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin backgrondImg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin overlay {
+  background-color: rgba(0, 0, 0, 0.329);
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card.inactive{
+    .modal_container{
+        color: $red;
+        display: none;
+    }  
+}
+
+
+.card.active{
+    .modal_container{
+        display: block;
+    }
+}
