@@ -115,6 +115,7 @@ $overlay: rgba(0, 0, 0, 0.402);
         width: 250px;
         height: 250px;
         border-radius: $circle;
+        cursor: pointer;
     }
 
     .modal_title{
@@ -123,6 +124,7 @@ $overlay: rgba(0, 0, 0, 0.402);
         font-size: 1.5rem;
         color: $accent_color;
         margin: 1rem 0 1rem 0;
+        cursor: pointer;
     }
 
     .premium_text{
@@ -135,7 +137,6 @@ $overlay: rgba(0, 0, 0, 0.402);
   }
 
 }
-
 .card{
     position: relative;
 }
@@ -154,8 +155,6 @@ $overlay: rgba(0, 0, 0, 0.402);
       }
 }
 }
-
-
 @media screen and (min-width: 1024px) {
     
 }

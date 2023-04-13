@@ -5,7 +5,7 @@ export const Primarybutton = () => {
   return (
   <Fragment>
 <button className='primary_btn'>Favourite <span className='love_icon'><AiTwotoneHeart/></span></button>
-<button className='like_count'>0</button>
+<button className='like_count'>43</button>
   </Fragment>
   )
 }

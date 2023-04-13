@@ -293,15 +293,16 @@ a:-webkit-any-link {
   font-size: 14px;
   width: 100%;
   border-radius: $rounded-edge;
-  height: 150px;
+  height: 170px;
   border: 1px solid $light_green;
   max-width: 350px;
   margin-bottom: 2.4rem;
   
   .recipe_img {
     width: 120px;
-    height: fit-content;
+    height: 100%;
     margin-top: 2px;
+    margin-left: 10px;
     align-items: center;
     border-radius: $rounded-edge 0 0 $rounded-edge;
     margin-right: 10px;
