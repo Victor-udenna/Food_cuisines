@@ -7,7 +7,7 @@ $circle: 50%;
 $rounded-edge: 1rem;
 $light_green: rgb(119, 199, 119);
 $light_bg: honeydew;
-$light_orange: rgb(255, 222, 161);
+$light_orange: #ffdea1;
 $orange_border: rgb(255, 183, 50);
 $orange: orange;
 $overlay: rgba(0, 0, 0, 0.402);
@@ -97,7 +97,7 @@ $overlay: rgba(0, 0, 0, 0.402);
         background-color: white;
         width: 100%;
         border-radius: 1.4rem 1.4rem  0px 0px;
-        height: 70vh;
+        height: 90vh;
         text-align: center;
     }
 
@@ -107,6 +107,7 @@ $overlay: rgba(0, 0, 0, 0.402);
         border: 0;
         padding: 10px;
         border-radius: $rounded-edge;
+        cursor: pointer;
     }
 
     .modal_img{

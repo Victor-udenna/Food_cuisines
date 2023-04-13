@@ -1,5 +1,4 @@
 import React from 'react'
-import { Primarybutton } from '../Atom/Primarybutton';
 import {BsFacebook, BsPinterest, BsReddit} from "react-icons/bs";
 import {AiFillTwitterCircle, AiFillInstagram} from "react-icons/ai";
 import logo from "../../assets/images/logo (1).png";

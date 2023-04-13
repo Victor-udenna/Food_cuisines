@@ -68,6 +68,10 @@ $orange: orange;
   height: 100%;
 }
 
+body{
+  font-family: 'Chivo Mono', monospace;
+}
+
 .nav_list {
   @include list();
 }
@@ -149,14 +153,43 @@ a:-webkit-any-link {
   @include overlay();
 }
 
+
 .primary_btn {
-  background-color: $accent_color;
-  color: white;
-  border: 0;
+  background-color: $light_bg;
+  border: 2px solid $accent_color;
+  color: $accent_color;
   border-radius: 10px;
+  font-weight: bold;
   padding: 10px;
   width: 100px;
   text-align: start;
+  font-size: 12px;
+  position: relative;
+}
+
+.love_icon{
+  padding-top: 4px;
+}
+
+.like_count{
+  background-color: $orange;
+  color: white;
+  width: 25px;
+  height: 25px;
+  padding: 3px 0 0px 0px;
+  border: 0;
+  border-radius: $circle;
+  position: absolute;
+  z-index: 1;
+  margin-left: -10px;
+  margin-top: -10px;
+
+}
+
+
+.primary_btn:hover{
+  color: white;
+  background-color: $accent_color;
 }
 
 .Topfood_container {
@@ -448,6 +481,7 @@ margin-left: 10px;
   margin-top: 2px;
   align-items: center;
   border-radius: $circle;
+  margin-right: 0px;
 }
 }
 

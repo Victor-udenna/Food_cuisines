@@ -1,10 +1,11 @@
-import React from 'react'
-type Buttontext= {
-    text: string
-}
+import React, { Fragment } from 'react'
+import { AiTwotoneHeart } from "react-icons/ai";
 
-export const Primarybutton = (props: Buttontext) => {
+export const Primarybutton = () => {
   return (
-    <button className='primary_btn'>{props.text}</button>
+  <Fragment>
+<button className='primary_btn'>Favourite <span className='love_icon'><AiTwotoneHeart/></span></button>
+<button className='like_count'>0</button>
+  </Fragment>
   )
 }

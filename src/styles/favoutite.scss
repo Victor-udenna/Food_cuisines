@@ -1,0 +1,143 @@
+// VARIABLES
+$accent_color: green;
+$red: red;
+$nav_background: rgba(0, 0, 0, 0.817);
+$z-10: 10;
+$circle: 50%;
+$rounded-edge: 1rem;
+$light_green: #77c777;
+$light_bg: honeydew;
+$light_orange: rgb(255, 222, 161);
+$orange_border: #ffb732;
+$orange: orange;
+$overlay: rgba(0, 0, 0, 0.402);
+
+// Mixin
+
+@mixin list {
+  list-style: none;
+  padding: 0;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@mixin flex_column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin flex_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin backgrondImg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin overlay {
+  background-color: rgba(0, 0, 0, 0.329);
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.favourite_header::before{
+    @include overlay()
+}
+
+.favourite_header{
+    text-align: center;
+    padding: 2.2rem 1rem;
+    height: 90vh;
+    background: url('https://media.istockphoto.com/id/643764532/photo/healthy-food-on-a-heart-shape-cutting-board.jpg?b=1&s=170667a&w=0&k=20&c=QTWM140deAnOEPYgXJeZmNH7R9M_2fl7l138es3m5z0=');
+    background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+    color: white;
+    position: relative;
+
+    h1{
+        font-size: 2.7rem;
+    }
+    p{
+        color: yellow;
+    }
+     h1 , p{
+        z-index: $z-10;
+        position: relative;
+     }
+
+}
+
+
+
+.like_img{
+    width: 100px;
+    z-index: $z-10;
+    position: relative;
+}
+
+
+
+
+@media screen and (min-width: 768px){
+    .like_img{
+        width: 200px;
+    } 
+    
+    .favourite_header{
+        @include flex()
+    }
+
+    .favourite_header{
+        padding: 0.1rem 3rem;
+        text-align: start;
+
+        h1{
+            font-size: 3.5rem;
+        }
+
+        p{
+            margin-left: 14px;
+        }
+    }
+
+    .favourite_text{
+        padding: 10px 1rem;
+    }
+    
+}
+
+@media screen and (min-width: 1024px){
+    .like_img{
+        width: 250px;
+    }  
+
+    .favourite_header{
+        h1{
+            font-size: 4.5rem;
+        }
+    }
+}
