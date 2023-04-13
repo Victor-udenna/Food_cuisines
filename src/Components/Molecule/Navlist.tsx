@@ -1,6 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Primarybutton } from '../Atom/Primarybutton'
+import { Primarybutton } from '../Atom/Primarybutton';
+
+// type Customtype = {
+//   children: {} | any;
+//   className: string;
+//   path: string;
+// };
+
+// function CustomLink(props: Customtype) {
+//   const resolvedpath = useResolvedPath(props.path);
+//   return (
+//     <Link to={props.path} {...props}>
+//       {props.children}
+//     </Link>
+//   );
+// }
 
 export const Navlist = () => {
   return (

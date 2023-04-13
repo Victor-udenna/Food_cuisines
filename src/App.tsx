@@ -1,7 +1,6 @@
 import React, {Fragment} from 'react'
 
 import './App.scss'
-import { Getdata } from './Components/Getdata';
 
 import {Routes, Route, BrowserRouter} from "react-router-dom"
 
@@ -17,7 +16,6 @@ function App() {
 
   return (
 <Fragment>
-<Getdata/>
 <BrowserRouter>
 <Routes>
   <Route path='/' element={<Home/>}/>
