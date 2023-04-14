@@ -26,6 +26,7 @@ let veganfood = fooddata.Vegan_food;
               return(
                 <FoodCard
                 key={item.id}
+                id={item.id}
                 title={item.title}
                 difficulty={item.difficulty}
                 image={item.image}
