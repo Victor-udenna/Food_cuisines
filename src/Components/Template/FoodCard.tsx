@@ -20,12 +20,16 @@ setmodal(!modal)
 const handlelike = ()=>{
  setLiked(!liked)
 console.log(liked);
-// axios.post('http://localhost:3000/liked_foods', {
-// id: props.id,
-// title: props.title,
-// difficulty: props.difficulty,
-// image: props.image
-//  })
+
+if ( liked === true){
+axios.post('http://localhost:3000/liked_foods', {
+id: props.id,
+title: props.title,
+difficulty: props.difficulty,
+image: props.image
+ })
+}
+
 }
 
   return (

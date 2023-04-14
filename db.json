@@ -23,6 +23,24 @@
       "title": "Black bean and chicken burritos",
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/mexican_api/4.jpg"
+    },
+    {
+      "title": "Marmite parsnips with poppy seeds",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/vegan_api/19.jpg",
+      "id": "yxFRjVl"
+    },
+    {
+      "title": "Marmite parsnips with poppy seeds",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/vegan_api/19.jpg",
+      "id": "XbEO2VA"
+    },
+    {
+      "title": "Vegan butternut squash risotto with millet",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/vegan_api/18.jpg",
+      "id": "lVgHYQA"
     }
   ]
 }
