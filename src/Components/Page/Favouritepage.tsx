@@ -8,6 +8,9 @@ export const Favouritepage = () => {
   <Fragment>
     <Navbar/>
     <Favouritebanner/>
+    <section>
+      <h1>Your Favourite Food</h1>
+    </section>
 <Footer/>
   </Fragment>
   )
