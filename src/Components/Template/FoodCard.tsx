@@ -1,34 +1,44 @@
-import React, { Fragment, useState} from 'react';
+import React, { Fragment, useEffect, useState} from 'react';
 import { dataType } from '../../types/datatypes';
 import  '../../styles/modal.scss';
 import { CgLoadbar } from 'react-icons/cg';
 import {AiOutlineHeart, AiFillHeart} from "react-icons/ai";
+import axios from 'axios';
 
 export const FoodCard = (props: dataType) => {
 
 const [modal, setmodal] = useState(false);
 const [liked, setLiked] = useState(false);
 
+const [image, setimage] = useState('');
+const [title, settitle] = useState('');
+const [difficulty, setdifficulty] =  useState('')
+const [id, setId] = useState('')
+
 const displaymodal = () =>{
 setmodal(!modal)
 }
 
+
 const handlelike = ()=>{
  setLiked(!liked)
+//  console.log(image, title, difficulty, id)
+console.log(liked);
+//  axios.post('http://localhost:3000/liked_foods', {
+  
+//  })
 }
 
   return (
   <Fragment>  
     <div className={`card ${modal ? 'active' : 'inactive'}`}>
     <div onClick={displaymodal}><img className="recipe_img" src={props.image}/></div>
-    <div className='recipe_text'>
-    <h3 className='title recipe_header' onClick={displaymodal}>{props.title}</h3>
-    <p className='difficulty'> <b className='recipe_header'>Difficulty:  </b>{props.difficulty}</p>
+    <div className='recipe_text' onClick={displaymodal}>
+    <h3 className='title recipe_header'>{props.title}</h3>
+    <p className='difficulty'> <b className='recipe_header'>Difficulty:</b>{props.difficulty}</p>
     <span className='card_badge'>Free</span>
     <span className='like_btn' onClick={handlelike}>{ liked ? <AiFillHeart color='red' size={25}/> : <AiOutlineHeart color='red' size={25}/>}</span>
     </div>
-
-
 
     <div className='modal_container '>
 <div className='modal'>
