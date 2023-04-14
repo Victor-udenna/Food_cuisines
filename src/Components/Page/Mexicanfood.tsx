@@ -29,6 +29,7 @@ export const Mexicanfood = () => {
                 return (
                   <FoodCard
                     key={items.id}
+                    id={items.id}
                     title={items.title}
                     difficulty={items.difficulty}
                     image={items.image}

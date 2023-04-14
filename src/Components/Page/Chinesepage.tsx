@@ -55,6 +55,7 @@ if ( i <= 30){
   return(
     <FoodCard
     key={item.id}
+    id={item.id}
     title={item.title}
     difficulty={item.difficulty}
     image={item.image}

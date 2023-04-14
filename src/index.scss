@@ -322,10 +322,18 @@ a:-webkit-any-link {
   }
 }
 
-.like_btn{
+.like_btn, .download_icon{
   position: absolute;
+}
+
+.like_btn{
   bottom: 10px;
   right: 10px;
+}
+
+.download_icon{
+  bottom: 10px;
+  right: 50px;
 }
 
 .app_footer {

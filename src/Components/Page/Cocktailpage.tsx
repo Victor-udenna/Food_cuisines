@@ -27,6 +27,7 @@ let allcocktail = fooddata.all_cocktail;
               return(
                 <FoodCard
                 key={item.id}
+                id={item.id}
                 title={item.title}
                 difficulty={item.difficulty}
                 image={item.image}

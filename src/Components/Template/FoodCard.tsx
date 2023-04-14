@@ -3,17 +3,14 @@ import { dataType } from '../../types/datatypes';
 import  '../../styles/modal.scss';
 import { CgLoadbar } from 'react-icons/cg';
 import {AiOutlineHeart, AiFillHeart} from "react-icons/ai";
+import {MdDownloadForOffline} from "react-icons/md";
 import axios from 'axios';
 
 export const FoodCard = (props: dataType) => {
 
 const [modal, setmodal] = useState(false);
-const [liked, setLiked] = useState(false);
+const [liked, setLiked] = useState<boolean>(true);
 
-const [image, setimage] = useState('');
-const [title, settitle] = useState('');
-const [difficulty, setdifficulty] =  useState('')
-const [id, setId] = useState('')
 
 const displaymodal = () =>{
 setmodal(!modal)
@@ -22,10 +19,12 @@ setmodal(!modal)
 
 const handlelike = ()=>{
  setLiked(!liked)
-//  console.log(image, title, difficulty, id)
 console.log(liked);
-//  axios.post('http://localhost:3000/liked_foods', {
-  
+// axios.post('http://localhost:3000/liked_foods', {
+// id: props.id,
+// title: props.title,
+// difficulty: props.difficulty,
+// image: props.image
 //  })
 }
 
@@ -37,7 +36,8 @@ console.log(liked);
     <h3 className='title recipe_header' onClick={displaymodal}>{props.title}</h3>
     <p className='difficulty'> <b className='recipe_header'>Difficulty:</b>{props.difficulty}</p>
     <span className='card_badge'>Free</span>
-    <span className='like_btn' onClick={handlelike}>{ liked ? <AiFillHeart color='red' size={25}/> : <AiOutlineHeart color='red' size={25}/>}</span>
+    <span className='like_btn' onClick={handlelike}>{ liked ? <AiOutlineHeart  color='red' size={27}/> : <AiFillHeart color='red' size={25}/>}</span>
+    <span className='download_icon'><MdDownloadForOffline color='green' size={27}/></span>
     </div>
 
     <div className='modal_container '>
