@@ -33,8 +33,8 @@ console.log(liked);
   <Fragment>  
     <div className={`card ${modal ? 'active' : 'inactive'}`}>
     <div onClick={displaymodal}><img className="recipe_img" src={props.image}/></div>
-    <div className='recipe_text' onClick={displaymodal}>
-    <h3 className='title recipe_header'>{props.title}</h3>
+    <div className='recipe_text'>
+    <h3 className='title recipe_header' onClick={displaymodal}>{props.title}</h3>
     <p className='difficulty'> <b className='recipe_header'>Difficulty:</b>{props.difficulty}</p>
     <span className='card_badge'>Free</span>
     <span className='like_btn' onClick={handlelike}>{ liked ? <AiFillHeart color='red' size={25}/> : <AiOutlineHeart color='red' size={25}/>}</span>
