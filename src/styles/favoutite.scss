@@ -67,6 +67,10 @@ $overlay: rgba(0, 0, 0, 0.402);
     @include overlay()
 }
 
+.favourite_h1{
+    padding: 2.2rem 1rem;    
+}
+
 .favourite_header{
     text-align: center;
     padding: 2.2rem 1rem;
@@ -84,7 +88,7 @@ background-position: center;
     p{
         color: yellow;
     }
-     h1 , p{
+     h1, p{
         z-index: $z-10;
         position: relative;
      }
@@ -105,6 +109,10 @@ background-position: center;
     
     .favourite_header{
         @include flex()
+    }
+
+    .favourite_h1{
+        padding: 3rem 3rem;
     }
 
     .favourite_header{

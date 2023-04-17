@@ -4,6 +4,7 @@ import { dataType } from '../../types/datatypes';
 import {AiOutlineHeart, AiFillHeart} from "react-icons/ai";
 import "../../styles/Favourite_card.scss";
 import {BsThreeDotsVertical} from "react-icons/bs";
+import {MdCancel} from "react-icons/md";
 
 
 export const Favouritefoodcard = (props: dataType) => {
@@ -54,13 +55,11 @@ export const Favouritefoodcard = (props: dataType) => {
 
 
 <div className={`remove_modal_container ${liked ? 'active' : 'inactive'}`}>
-
 <div className='remove_modal'>
-<div><img src={props.image}/></div>
+<div className='cancel_modal'><MdCancel color='red' size={27}/></div>
 <h4>{props.title}</h4>
 <p>Are you sure you want to revome this recipe ?</p>
 <button className='confirm_btn' onClick={handlelike}>Remove Recipe</button>
-<div></div>
 </div>
 
 

@@ -7,6 +7,7 @@ import { Favouritefoodcard } from "../Template/Favouritefoodcard";
 import axios from "axios";
 
 
+
 export const Favouritepage = () => {
 
   const [likedFood, setLikedfood] = useState<any>([])
@@ -31,7 +32,7 @@ console.log(data)
     <Navbar/>
     <Favouritebanner/>
     <section>
-      <h1>Your Favourite Food</h1>
+      <h1 className="favourite_h1">Your Favourite Food</h1>
     </section>
     <section className="">
     <div className="card_container">

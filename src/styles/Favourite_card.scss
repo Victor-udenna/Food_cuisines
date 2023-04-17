@@ -189,19 +189,21 @@ $orange: orange;
       text-align: center;
       border-radius: $rounded-edge;
       width: 300px;
+      position: relative;
 
-      img{
-        width: 200px;
-        height: 200px;
-        border-radius: $circle;
-        border: 2px solid $accent_color;
-        margin-top: -100px;
-        margin-bottom: 10px;
-      }
+      
+     .cancel_modal{
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      margin-bottom: 10px;
+   }
        
       h4{
         color: $accent_color;
-        padding: 1rem 0rem;
+        padding: 1.3rem 0rem;
       }
       p{
         color: black;
