@@ -9,10 +9,13 @@ export const Primarybutton = () => {
 useEffect(()=>{
 axios.get("http://localhost:3000/liked_foods").then((response)=>{
 setlikedNo(response.data.length)
+console.log(response.data)
 }).catch((error)=>{
   console.log(error)
 })
-}, [1000])
+}, [])
+
+
 
 
   return (

@@ -1,0 +1,240 @@
+// VARIABLES
+$accent_color: green;
+$red: red;
+$nav_background: rgba(0, 0, 0, 0.817);
+$z-10: 10;
+$circle: 50%;
+$rounded-edge: 1rem;
+$light_green: rgb(119, 199, 119);
+$light_bg: honeydew;
+$light_orange: rgb(255, 222, 161);
+$orange_border: rgb(255, 183, 50);
+$orange: orange;
+
+// Mixin
+
+@mixin list {
+  list-style: none;
+  padding: 0;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@mixin flex_column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin flex_column_start{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin flex_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin flex_wrap_between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+@mixin backgrondImg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin overlay {
+  background-color: rgba(0, 0, 0, 0.329);
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.favourite_card{
+    @include flex_row()
+}
+
+.favourite_text{
+    @include flex_column_start()
+}
+
+.favourite_card{
+    margin: 10px;
+    position: relative;
+    border-radius: $rounded-edge;
+    background-color: $red;
+    max-width: 350px;
+    padding: 0.6rem;
+    background-color: $light_bg;
+    border: 1px solid $light_green;
+    width: 100%;
+    .favourite_img{
+        width: 100px;
+        height: 100px;
+        border-radius: $circle;
+        border: 2px solid $accent_color;
+    }
+}
+
+
+.favourite_like{
+    @include flex_column()
+}
+
+.favourite_like{
+    background-color: rgba(255, 255, 255, 0.735);
+    border: 1px solid $orange;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: $rounded-edge;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.popup_container.inactive{
+    display: none;
+}
+
+.popup_container.active{
+    background-color: rgba(255, 255, 255, 0.902);
+    padding: 10px;
+    z-index: 1;
+    border-radius: $rounded-edge;
+    width: 100px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.popup_btn{
+    background-color: transparent;
+    border: 0;
+    padding: 7px 0;
+}
+
+
+.dowload_option:hover{
+    color: $accent_color;
+}
+
+.remove_option:hover{
+    color: $orange;
+}
+
+.card_container {
+    @include flex_wrap();
+  }
+
+  .card_container{
+    padding: 1.5rem;
+   }
+
+
+   .remove_modal_container.inactive{
+    display: none;
+   }
+
+
+   .remove_modal_container{
+    @include flex_column()
+   }
+
+  
+   .remove_modal_container{
+    background-color: rgba(0, 0, 0, 0.368);
+    padding: 10px;
+    border-radius: $rounded-edge;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+
+
+   
+    .remove_modal{
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: $rounded-edge;
+      width: 300px;
+
+      img{
+        width: 200px;
+        height: 200px;
+        border-radius: $circle;
+        border: 2px solid $accent_color;
+        margin-top: -100px;
+        margin-bottom: 10px;
+      }
+       
+      h4{
+        color: $accent_color;
+        padding: 1rem 0rem;
+      }
+      p{
+        color: black;
+        padding: 1.5rem 0;
+      }
+      .confirm_btn{
+        background-color: $accent_color;
+        color: white;
+        border-radius: $rounded-edge;
+        border: 0px;
+        padding: 10px 1rem;
+        font-weight: 600;
+      }
+     }
+
+   }
+
+ 
+
+@media screen and (min-width: 768px) {
+    .card_container{
+        @include flex_wrap_between()
+      }
+
+      .card_container{
+        padding: 2.4rem;
+       }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .card_container{
+        padding: 3.4rem;
+       }
+}
+
