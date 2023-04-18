@@ -15,27 +15,26 @@ export const Favouritefoodcard = (props: dataType) => {
     const handlelike  =()=>{
         setLiked(!liked)
         setPopup(false);
-        // if (liked === true){
-        //     axios.delete(`http://localhost:3000/liked_foods/${props.id}`).then((response)=>{
-        //         console.log(response.data)
-        //     }).catch((error)=>{
-        //         console.log(error)
-        //     })
-        //  }
-console.log(liked);    
+        console.log(liked);    
     
     }
-
     const handlepopUp =()=>{
         setPopup(!popup);
         console.log(popup)
     }
-
     const closePopUp =()=>{
         setPopup(false);
     }
 
-    // const removeItem = ()
+   const deleteRecipe =()=> {
+       axios.delete(`http://localhost:3000/liked_foods/${props.id}`).then((response)=>{
+                console.log(response.data)
+            }).catch((error)=>{
+                console.log(error)
+            })
+            setLiked(false)
+            window.location.reload()
+   } 
 
 
 
@@ -65,7 +64,7 @@ console.log(liked);
 <div className='cancel_modal' onClick={handlelike}><MdCancel color='orange' size={27}/></div>
 <h4>{props.title}</h4>
 <p>Are you sure you want to revome this recipe ?</p>
-<button className='confirm_btn' onClick={handlelike}>Remove Recipe</button>
+<button className='confirm_btn' onClick={deleteRecipe}>Remove Recipe</button>
 </div>
 
 

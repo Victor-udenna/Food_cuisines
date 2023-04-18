@@ -1,34 +1,10 @@
 {
   "liked_foods": [
     {
-      "title": "Vegan butternut squash risotto with millet",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/vegan_api/18.jpg",
-      "id": "lVgHYQA"
-    },
-    {
-      "id": "16",
-      "title": "Enchiladas verdes",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/mexican_api/16.jpg"
-    },
-    {
       "id": "18",
       "title": "Vegan butternut squash risotto with millet",
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/vegan_api/18.jpg"
-    },
-    {
-      "id": "19",
-      "title": "Marmite parsnips with poppy seeds",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/vegan_api/19.jpg"
-    },
-    {
-      "id": "8",
-      "title": "Chilaquiles with fresh tomatillo salsa",
-      "difficulty": "Medium",
-      "image": "https://apipics.s3.amazonaws.com/mexican_api/8.jpg"
     },
     {
       "id": "7",
@@ -71,12 +47,6 @@
       "title": "Mexican chicken and red rice burrito bowls",
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/mexican_api/29.jpg"
-    },
-    {
-      "id": "28",
-      "title": "Strawberry, lime and elderflower muddle",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/coctails_api/28.jpg"
     },
     {
       "id": "27",
