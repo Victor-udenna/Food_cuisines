@@ -53,8 +53,8 @@ console.log(liked);
 <div onClick={handlepopUp}><BsThreeDotsVertical size={20}/></div>
 
 <div className={`popup_container ${popup ? 'active': 'inactive'}`}>
-<button className='popup_btn dowload_option' onClick={handlelike}>Download</button>
-<button className='popup_btn remove_option'>Remove</button>
+<button className='popup_btn dowload_option'>Download</button>
+<button className='popup_btn remove_option' onClick={handlelike}>Remove</button>
 </div>
 </div>
 
