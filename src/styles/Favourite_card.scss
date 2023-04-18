@@ -10,6 +10,7 @@ $light_bg: honeydew;
 $light_orange: rgb(255, 222, 161);
 $orange_border: rgb(255, 183, 50);
 $orange: orange;
+$grey: rgb(232, 232, 232);
 
 // Mixin
 
@@ -221,6 +222,48 @@ $orange: orange;
      }
 
    }
+
+   .fav_lazy_loading{
+    @include flex()
+  }
+  
+  .fav_lazy_loading{
+    background-color: $grey;
+    max-width: 350px;
+    margin-bottom: 30px;
+    border-radius: $rounded-edge;
+    padding: 15px;
+  
+   .img{
+    width: 100px;
+    height: 100px;
+    border-radius: $circle;
+   }
+  
+   .lazy_text{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+   }
+  
+   .lazy_text{
+    padding-left: 30px;
+   }
+  
+   .title{
+    width: 150px;
+    height: 30px;
+    margin-bottom: 20px;
+   }
+  
+   .difficulty{
+    width: 40px;
+    height: 20px;
+   }
+  
+  }
+  
 
  
 

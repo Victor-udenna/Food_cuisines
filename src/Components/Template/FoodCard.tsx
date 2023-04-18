@@ -22,14 +22,13 @@ console.log(liked);
 
 if ( liked === true){
 axios.post('http://localhost:3000/liked_foods', {
-id: props.id,
 title: props.title,
 difficulty: props.difficulty,
 image: props.image
  })
 }
 
-if ( liked == false){
+if ( liked === false){
   axios.delete(`http://localhost:3000/liked_foods/${props.id}`)
 }
 

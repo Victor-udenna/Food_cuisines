@@ -6,6 +6,7 @@ import axios from 'axios'
 import { Topcocktail } from '../Template/Topcocktail'
 import { FoodCard } from '../Template/FoodCard';
 import fooddata from "../../data/Topfood.json"
+import { Card_lazyloading } from '../Template/Card_lazyloading'
 
 export const Cocktailpage = () => {
   
@@ -21,7 +22,11 @@ let allcocktail = fooddata.all_cocktail;
     <Topcocktail/>
     <section>
     <h2 className='food_header'>Our Cocktails Recipes</h2>
+    
         <div className="card_container">
+         
+        <Card_lazyloading/>
+
           {allcocktail?.map((item: any, i: number)=>{
             if( i < 30){
               return(

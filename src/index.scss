@@ -10,6 +10,7 @@ $light_bg: honeydew;
 $light_orange: rgb(255, 222, 161);
 $orange_border: rgb(255, 183, 50);
 $orange: orange;
+$grey: rgb(232, 232, 232);
 
 // Mixin
 
@@ -412,6 +413,46 @@ input{
   border-radius: 50%;
 }
 
+.card_lazy_loading{
+  @include flex()
+}
+
+.card_lazy_loading{
+  background-color: $grey;
+  max-width: 350px;
+  margin-bottom: 30px;
+  border-radius: $rounded-edge;
+
+ .img{
+  width: 100px;
+  height: 140px;
+  border-radius: $rounded-edge;
+ }
+
+ .lazy_text{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+ }
+
+ .lazy_text{
+  padding-left: 30px;
+ }
+
+ .title{
+  width: 150px;
+  height: 30px;
+  margin-bottom: 20px;
+ }
+
+ .difficulty{
+  width: 40px;
+  height: 20px;
+ }
+
+}
+
 @media screen and (min-width: 768px) {
   .mobile_nav,
   .mobile_link_container,
@@ -512,6 +553,42 @@ margin-left: 10px;
  .food_header, .Topfood_container {
    padding: 2.4rem;
  }
+
+.card_lazy_loading{
+  @include flex_column()
+}
+
+.card_lazy_loading{
+  width: 210px;
+  height: 350px;
+  padding: 10px;  
+
+.lazy_text{
+@include flex_column()
+}
+
+.lazy_text{
+  padding-left: 0;
+}
+
+  .img{
+    border-radius: $circle;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+
+  .title{
+    width: 180px;
+    height: 30px;
+  }
+
+  .difficulty{
+    width: 50px;
+    height: 30px;
+  }
+}
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -549,3 +626,30 @@ margin-left: 10px;
 
 }
 
+
+
+
+.lazyColor {
+	opacity: 0.5;
+background: linear-gradient(135deg, rgba(211,223,232,.5) 30%,rgba(169,184,197,.5) 38%,rgba(168,182,193,.6) 41%,rgba(168,182,193,.6) 50%,rgba(168,182,193,.6) 50%,rgba(169,184,197,.6) 51%,rgba(211,223,232,.6) 57%,rgba(211,223,232,.6) 80%,rgba(211,223,232,.6) 80%);
+background-size: 1200% 1200%;
+-webkit-animation: AnimationName 2s ease infinite reverse;
+-moz-animation: AnimationName 2s ease infinite reverse;
+animation: AnimationName 2s ease infinite reverse;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 92%}
+    50%{background-position:100% 9%}
+    100%{background-position:0% 92%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 92%}
+    50%{background-position:100% 9%}
+    100%{background-position:0% 92%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 92%}
+    100%{background-position:100% 9%}
+/*     100%{background-position:0% 92%} */
+}

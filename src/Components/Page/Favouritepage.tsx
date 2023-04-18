@@ -4,6 +4,7 @@ import { Navbar } from "../Template/Navbar";
 import { Favouritebanner } from "../Template/Favouritebanner";
 import { useQuery } from "react-query";
 import { Favouritefoodcard } from "../Template/Favouritefoodcard";
+import { Favouritelazyload } from "../Template/Favouritelazyload";
 import axios from "axios";
 
 
@@ -36,6 +37,7 @@ console.log(data)
     </section>
     <section className="">
     <div className="card_container">
+    
     {
         status === "success" && likedFood.map((item: any)=>{
           return(
@@ -50,9 +52,10 @@ console.log(data)
           )
         })
       }
+
+{ status === "loading" && <Favouritelazyload/>}
     </div>
 
-      { status === "loading" && <div>Loading...</div>}
       {status === 'error' && <div>Error</div>}
     </section>
     {/* <Favouritefoodcard/> */}
