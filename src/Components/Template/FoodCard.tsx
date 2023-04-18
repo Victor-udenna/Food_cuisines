@@ -17,7 +17,7 @@ setmodal(!modal)
 
 
 const handlelike = ()=>{
- setLiked(true)
+ setLiked(!liked)
 console.log(liked);
 
 if ( liked === true){

@@ -14,6 +14,7 @@ export const Favouritefoodcard = (props: dataType) => {
 
     const handlelike  =()=>{
         setLiked(!liked)
+        setPopup(false);
         // if (liked === true){
         //     axios.delete(`http://localhost:3000/liked_foods/${props.id}`).then((response)=>{
         //         console.log(response.data)
@@ -21,8 +22,7 @@ export const Favouritefoodcard = (props: dataType) => {
         //         console.log(error)
         //     })
         //  }
-
-         console.log(liked);    
+console.log(liked);    
     
     }
 
@@ -31,6 +31,12 @@ export const Favouritefoodcard = (props: dataType) => {
         console.log(popup)
     }
 
+    const closePopUp =()=>{
+        setPopup(false);
+    }
+
+    // const removeItem = ()
+
 
 
 
@@ -38,16 +44,16 @@ export const Favouritefoodcard = (props: dataType) => {
   return (
 <Fragment>
     <div className='favourite_card'>
-        <div className='fav_img_container'><img className='favourite_img' src={props.image}/></div>
+        <div className='fav_img_container' onClick={closePopUp}><img className='favourite_img' src={props.image}/></div>
 <div className='favourite_text'>
-    <h5 className='favourite_title'>{props.title}</h5>
+    <h5 className='favourite_title' onClick={closePopUp}>{props.title}</h5>
     <p className='favourite_difficulty'>{props.difficulty}</p>
     <span className='favourite_like' onClick={handlelike}>{liked ? <AiOutlineHeart color='red' size={27}/>  : <AiFillHeart color='red' size={27}/> }</span>
 </div>
 <div onClick={handlepopUp}><BsThreeDotsVertical size={20}/></div>
 
 <div className={`popup_container ${popup ? 'active': 'inactive'}`}>
-<button className='popup_btn dowload_option'>Download</button>
+<button className='popup_btn dowload_option' onClick={handlelike}>Download</button>
 <button className='popup_btn remove_option'>Remove</button>
 </div>
 </div>
@@ -56,7 +62,7 @@ export const Favouritefoodcard = (props: dataType) => {
 
 <div className={`remove_modal_container ${liked ? 'active' : 'inactive'}`}>
 <div className='remove_modal'>
-<div className='cancel_modal'><MdCancel color='red' size={27}/></div>
+<div className='cancel_modal' onClick={handlelike}><MdCancel color='orange' size={27}/></div>
 <h4>{props.title}</h4>
 <p>Are you sure you want to revome this recipe ?</p>
 <button className='confirm_btn' onClick={handlelike}>Remove Recipe</button>

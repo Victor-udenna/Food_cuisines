@@ -109,12 +109,6 @@
       "image": "https://apipics.s3.amazonaws.com/vegan_api/1.jpg"
     },
     {
-      "id": "11",
-      "title": "Easy huevos rancheros",
-      "difficulty": "Medium",
-      "image": "https://apipics.s3.amazonaws.com/mexican_api/11.jpg"
-    },
-    {
       "id": "25",
       "title": "Pickled bramble martini",
       "difficulty": "Easy",
@@ -157,12 +151,6 @@
       "image": "https://apipics.s3.amazonaws.com/coctails_api/10.jpg"
     },
     {
-      "id": "3",
-      "title": "Fishcake tacos",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/mexican_api/3.jpg"
-    },
-    {
       "id": "5",
       "title": "Pork tacos with sweetcorn and feta",
       "difficulty": "Easy",
@@ -179,6 +167,12 @@
       "title": "Traditional pretzels",
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/vegan_api/4.jpg"
+    },
+    {
+      "id": "13",
+      "title": "Rhubarb and ginger cocktail",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/coctails_api/13.jpg"
     }
   ]
 }
