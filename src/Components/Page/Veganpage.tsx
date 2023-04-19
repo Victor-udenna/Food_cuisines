@@ -1,15 +1,38 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import { Navbar } from '../Template/Navbar'
 import { Banner } from '../Template/Banner'
 import { Footer } from '../Template/Footer'
 import { Topvegan } from '../Template/Topvegan';
-import fooddata from "../../data/Topfood.json";
 import { FoodCard } from '../Template/FoodCard';
+import { useQuery } from 'react-query';
+import axios from 'axios';
+import { Card_lazyloading } from '../Template/Card_lazyloading';
 
 
 export const Veganpage = () => {
 
-let veganfood = fooddata.Vegan_food;
+const [foodData, setFoodData] = useState ([]);
+
+const options = {
+  method: 'GET',
+  url: 'https://the-vegan-recipes-db.p.rapidapi.com/',
+  headers: {
+    // 'X-RapidAPI-Key': '2eb9578c9emsh80336b04e9b9b41p1b565ajsnec3d31f4b6b2',
+    'X-RapidAPI-Host': 'the-vegan-recipes-db.p.rapidapi.com'
+  }
+};
+
+const getVeganfood =()=>{
+  axios.request(options).then(function (response) {
+    setFoodData(response.data)
+  }).catch(function (error) {
+    console.error(error);
+  });
+}
+
+
+const {status, data} = useQuery("food", getVeganfood);
+console.log(status)
 
   return (
   <Fragment>
@@ -21,7 +44,7 @@ let veganfood = fooddata.Vegan_food;
  <section>
  <h2 className='food_header'>Our Vegetarian Recipes</h2>
         <div className="card_container">
-          {veganfood?.map((item: any, i: number)=>{
+          {  status === 'success' &&  foodData?.map((item: any, i: number)=>{
             if(i < 30) {
               return(
                 <FoodCard
@@ -34,6 +57,9 @@ let veganfood = fooddata.Vegan_food;
                   )
             }
           })}
+
+          {status === 'loading' && <Card_lazyloading/>}
+          {status === 'error' && <div>Error getting recipe</div>}
         </div>
         </section>
  <Footer/>

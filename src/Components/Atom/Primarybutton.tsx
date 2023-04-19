@@ -6,11 +6,11 @@ export const Primarybutton = () => {
 
   const [likedno, setlikedNo] = useState(0);
 
-setInterval(()=>{
-  axios.get("http://localhost:3000/liked_foods").then((response)=>{
-setlikedNo(response.data.length)
-})
-}, 1000)
+// setInterval(()=>{
+//   axios.get("http://localhost:3000/liked_foods").then((response)=>{
+// setlikedNo(response.data.length)
+// })
+// }, 1000)
 
 
 

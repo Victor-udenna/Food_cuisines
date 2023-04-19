@@ -13,12 +13,6 @@
       "image": "https://apipics.s3.amazonaws.com/vegan_api/25.jpg"
     },
     {
-      "id": "23",
-      "title": "Raspberry margarita",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/coctails_api/23.jpg"
-    },
-    {
       "id": "12",
       "title": "Turkey pozole",
       "difficulty": "Easy",
@@ -79,22 +73,10 @@
       "id": "YY_1DLq"
     },
     {
-      "title": "Turkey pozole",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/mexican_api/12.jpg",
-      "id": "BpK_fKj"
-    },
-    {
       "title": "Smoky chipotle tofu with tomatoes and avocado",
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/mexican_api/7.jpg",
       "id": "TkePzqi"
-    },
-    {
-      "title": "Turkey pozole",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/mexican_api/12.jpg",
-      "id": "azG1-83"
     },
     {
       "title": "Mexican-style barbecued beef brisket with quick-pickled onions",
@@ -107,6 +89,114 @@
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/mexican_api/2.jpg",
       "id": "qkmrs04"
+    },
+    {
+      "title": "Pressure cooker refried beans",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/1.jpg",
+      "id": "0FsjoDz"
+    },
+    {
+      "title": "Chilaquiles with fresh tomatillo salsa",
+      "difficulty": "Medium",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/8.jpg",
+      "id": "cvIDuf_"
+    },
+    {
+      "title": "Black bean chilli soup with corn dumplings",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/2.jpg",
+      "id": "ppQ0XKI"
+    },
+    {
+      "title": "Black bean chilli soup with corn dumplings",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/2.jpg",
+      "id": "itys1W-"
+    },
+    {
+      "title": "Black bean chilli soup with corn dumplings",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/2.jpg",
+      "id": "ZrtjH-2"
+    },
+    {
+      "title": "Smoky chipotle tofu with tomatoes and avocado",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/7.jpg",
+      "id": "ubSJr8h"
+    },
+    {
+      "title": "Black bean and chicken burritos",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/4.jpg",
+      "id": "TC0xD-0"
+    },
+    {
+      "title": "Pressure cooker refried beans",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/vegan_api/2.jpg",
+      "id": "uB8RHQX"
+    },
+    {
+      "title": "Whisky Aperol hot toddy",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/coctails_api/25.jpg",
+      "id": "sF37Imp"
+    },
+    {
+      "title": "Pressure cooker refried beans",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/1.jpg",
+      "id": "BkCM911"
+    },
+    {
+      "title": "Easy huevos rancheros",
+      "difficulty": "Medium",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/11.jpg",
+      "id": "1yH5sRf"
+    },
+    {
+      "title": "Raspberry margarita",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/coctails_api/23.jpg",
+      "id": "9gvzRh1"
+    },
+    {
+      "title": "Raspberry margarita",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/coctails_api/23.jpg",
+      "id": "BMLLHnH"
+    },
+    {
+      "title": "Raspberry margarita",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/coctails_api/23.jpg",
+      "id": "toVcf8I"
+    },
+    {
+      "title": "Raspberry margarita",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/coctails_api/23.jpg",
+      "id": "JPknKBa"
+    },
+    {
+      "title": "Homemade crispy chilli oil",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/chinese_recipes_api/1.jpg",
+      "id": "hp3u_QT"
+    },
+    {
+      "title": "Mulled chai cider",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/coctails_api/30.jpg",
+      "id": "pcZNc2_"
+    },
+    {
+      "title": "Ultimate vegan lasagne",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/vegan_api/6.jpg",
+      "id": "doMApVI"
     }
   ]
 }

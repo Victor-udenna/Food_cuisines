@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { Fragment, useState } from 'react'
 import { Navbar } from '../Template/Navbar'
 import { Banner } from '../Template/Banner'
 import { Footer } from '../Template/Footer'
@@ -7,10 +7,33 @@ import { Topcocktail } from '../Template/Topcocktail'
 import { FoodCard } from '../Template/FoodCard';
 import fooddata from "../../data/Topfood.json"
 import { Card_lazyloading } from '../Template/Card_lazyloading'
+import { useQuery } from 'react-query'
+
 
 export const Cocktailpage = () => {
-  
-let allcocktail = fooddata.all_cocktail;
+
+const [foodData, setFoodData] = useState([]);
+
+const options = {
+  method: 'GET',
+  url: 'https://the-cocktail-db3.p.rapidapi.com/',
+  headers: {
+    // 'X-RapidAPI-Key': '2eb9578c9emsh80336b04e9b9b41p1b565ajsnec3d31f4b6b2',
+    'X-RapidAPI-Host': 'the-cocktail-db3.p.rapidapi.com'
+  }
+};
+
+const getCocktail =()=>{
+  axios.request(options).then(function (response) {
+    setFoodData(response.data)
+   }).catch(function (error) {
+     console.error(error);
+   });
+}
+
+
+const {data, status} = useQuery("food", getCocktail);
+
 
   return (
   <Fragment>
@@ -24,10 +47,7 @@ let allcocktail = fooddata.all_cocktail;
     <h2 className='food_header'>Our Cocktails Recipes</h2>
     
         <div className="card_container">
-         
-        <Card_lazyloading/>
-
-          {allcocktail?.map((item: any, i: number)=>{
+          {status === "success" && foodData?.map((item: any, i: number)=>{
             if( i < 30){
               return(
                 <FoodCard
@@ -40,6 +60,14 @@ let allcocktail = fooddata.all_cocktail;
                   )
             }
           })} 
+
+          {
+            status === "loading" && <Card_lazyloading/>
+          }
+
+          {
+            status === "error" && <div>Error getting recipe</div>
+          }
         </div>
         </section>
     <Footer/>

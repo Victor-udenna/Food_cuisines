@@ -235,6 +235,7 @@ a:-webkit-any-link {
 .topfood_title {
   color: $accent_color;
   padding-bottom: 0.7rem;
+  font-size: .8rem
 }
 
 .topfood_detail {
@@ -454,33 +455,8 @@ input{
 }
 
 @media screen and (min-width: 768px) {
-  .mobile_nav,
-  .mobile_link_container,
-  .mobile_link_container.active {
-    display: none;
-  }
 
-  .desktop_nav {
-    @include flex_row;
-  }
 
-  .desktop_nav,
-  .app_footer {
-    padding: 0.1rem 3rem;
-  }
-
-  .nav_list {
-    @include flex_row();
-  }
-
-  .primary_btn {
-    text-align: center;
-  }
-
-  .nav_link,
-  a:-webkit-any-link {
-    padding: 0rem 0rem 0rem 2rem;
-  }
 
   .banner_header {
     font-size: 3.5rem;
@@ -589,6 +565,37 @@ margin-left: 10px;
   }
 }
 
+}
+
+
+@media screen and (min-width: 900px){
+  .mobile_nav,
+  .mobile_link_container,
+  .mobile_link_container.active {
+    display: none;
+  }
+
+  .desktop_nav {
+    @include flex_row;
+  }
+
+  .desktop_nav,
+  .app_footer {
+    padding: 0.1rem 3rem;
+  }
+
+  .nav_list {
+    @include flex_row();
+  }
+
+  .primary_btn {
+    text-align: center;
+  }
+
+  .nav_link,
+  a:-webkit-any-link {
+    padding: 0rem 0rem 0rem 2rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {

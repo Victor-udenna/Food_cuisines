@@ -4,9 +4,7 @@ import { Navbar } from '../Template/Navbar'
 import { Banner } from '../Template/Banner'
 import { Footer } from '../Template/Footer'
 import { Topchinese } from '../Template/Topchinese'
-// import fooddata from '../../data/Topfood.json';
 import { FoodCard } from '../Template/FoodCard';
-// import { dataType } from '../../types/datatypes';
 import { useQuery } from 'react-query';
 
 
@@ -34,9 +32,7 @@ const getchinese =()=>{
     console.error(error);
   });
 }
-  const {data, status} = useQuery(["food"], getchinese, {
-    staleTime: 20 * (60 * 1000),      // staletime
-  });
+  const {data, status} = useQuery(["food"], getchinese);
   console.log(status)
   console.log(data)
   return (
@@ -64,7 +60,7 @@ if ( i <= 30){
 }
           })}
           { status === "loading" && <div>loading....</div>}
-          { status === "error" && <div>An error occured</div>}
+          { status === "error" && <div>Error getting recipe</div>}
         </div>
         </section>
         <Footer/>
