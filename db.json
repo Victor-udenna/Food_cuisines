@@ -25,12 +25,6 @@
       "image": "https://apipics.s3.amazonaws.com/coctails_api/10.jpg"
     },
     {
-      "id": "13",
-      "title": "Rhubarb and ginger cocktail",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/coctails_api/13.jpg"
-    },
-    {
       "id": "5",
       "title": "Pork tacos with sweetcorn and feta",
       "difficulty": "Easy",
@@ -191,12 +185,6 @@
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/coctails_api/30.jpg",
       "id": "pcZNc2_"
-    },
-    {
-      "title": "Ultimate vegan lasagne",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/vegan_api/6.jpg",
-      "id": "doMApVI"
     }
   ]
 }

@@ -62,87 +62,83 @@ $overlay: rgba(0, 0, 0, 0.402);
   height: 100%;
 }
 
-
-.favourite_header::before{
-    @include overlay()
+.favourite_header::before {
+  @include overlay();
 }
 
-.favourite_h1{
-    padding: 2.2rem 1rem;    
+.favourite_h1 {
+  padding: 2.2rem 1rem;
 }
 
-.favourite_header{
-    text-align: center;
-    padding: 2.2rem 1rem;
-    height: 90vh;
-    background: url('https://media.istockphoto.com/id/643764532/photo/healthy-food-on-a-heart-shape-cutting-board.jpg?b=1&s=170667a&w=0&k=20&c=QTWM140deAnOEPYgXJeZmNH7R9M_2fl7l138es3m5z0=');
-    background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
-    color: white;
-    position: relative;
-    
+.favourite_header {
+  text-align: center;
+  padding: 2.2rem 1rem;
+  height: 90vh;
+  background: url("https://media.istockphoto.com/id/643764532/photo/healthy-food-on-a-heart-shape-cutting-board.jpg?b=1&s=170667a&w=0&k=20&c=QTWM140deAnOEPYgXJeZmNH7R9M_2fl7l138es3m5z0=");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  position: relative;
 
-    h1{
-        font-size: 2.7rem;
-    }
-    p{
-        color: yellow;
-    }
-     h1, p{
-        z-index: $z-10;
-        position: relative;
-     }
-
-}
-
-.like_img{
-    width: 100px;
+  h1 {
+    font-size: 2.7rem;
+  }
+  p {
+    color: yellow;
+  }
+  h1,
+  p {
     z-index: $z-10;
     position: relative;
+  }
 }
 
-
-@media screen and (min-width: 768px){
-    .like_img{
-        width: 200px;
-    } 
-    
-    .favourite_header{
-        @include flex()
-    }
-
-    .favourite_h1{
-        padding: 3rem 3rem;
-    }
-
-    .favourite_header{
-        padding: 0.1rem 3rem;
-        text-align: start;
-
-        h1{
-            font-size: 3.5rem;
-        }
-
-        p{
-            margin-left: 14px;
-        }
-    }
-
-    .favourite_text{
-        padding: 10px 1rem;
-    }
-    
+.like_img {
+  width: 100px;
+  z-index: $z-10;
+  position: relative;
 }
 
-@media screen and (min-width: 1024px){
-    .like_img{
-        width: 250px;
-    }  
+@media screen and (min-width: 768px) {
+  .like_img {
+    width: 200px;
+  }
 
-    .favourite_header{
-        h1{
-            font-size: 4.5rem;
-        }
+  .favourite_header {
+    @include flex();
+  }
+
+  .favourite_h1 {
+    padding: 3rem 3rem;
+  }
+
+  .favourite_header {
+    padding: 0.1rem 3rem;
+    text-align: start;
+
+    h1 {
+      font-size: 3.5rem;
     }
+
+    p {
+      margin-left: 14px;
+    }
+  }
+
+  .favourite_text {
+    padding: 10px 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .like_img {
+    width: 250px;
+  }
+
+  .favourite_header {
+    h1 {
+      font-size: 4.5rem;
+    }
+  }
 }

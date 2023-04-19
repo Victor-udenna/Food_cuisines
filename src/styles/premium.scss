@@ -1,0 +1,106 @@
+// VARIABLES
+$accent_color: green;
+$red: red;
+$nav_background: rgba(0, 0, 0, 0.817);
+$z-10: 10;
+$circle: 50%;
+$rounded-edge: 1rem;
+$light_green: rgb(119, 199, 119);
+$light_bg: honeydew;
+$light_orange: #ffdea1;
+$orange_border: rgb(255, 183, 50);
+$orange: orange;
+$overlay: rgba(0, 0, 0, 0.402);
+
+// Mixin
+
+@mixin list {
+  list-style: none;
+  padding: 0;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@mixin flex_column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin flex_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin backgrondImg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin overlay {
+  background-color: rgba(0, 0, 0, 0.329);
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  padding: 10px 1.5rem;
+}
+
+.text_content {
+  padding: 2rem 0 2rem 0;
+  h2 {
+    color: $accent_color;
+  }
+}
+
+.list {
+  list-style: none;
+  li {
+    padding: 20px 0px 20px 0px;
+  }
+}
+
+.premium_btn {
+  border: 1.7px solid $accent_color;
+  padding: 10px;
+  width: 120px;
+  color: white;
+  background-color: $accent_color;
+  font-weight: bold;
+  border-radius: $rounded-edge;
+}
+
+.premium_btn:hover {
+  border: 1.7px solid $accent_color;
+  color: $accent_color;
+  background-color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 60vh;
+  }
+
+  .main {
+    padding: 2rem 2.5rem;
+  }
+}

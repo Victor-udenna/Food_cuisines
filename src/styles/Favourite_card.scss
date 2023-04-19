@@ -38,11 +38,11 @@ $grey: rgb(232, 232, 232);
   flex-direction: column;
 }
 
-@mixin flex_column_start{
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    flex-direction: column;
+@mixin flex_column_start {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @mixin flex_wrap {
@@ -52,12 +52,11 @@ $grey: rgb(232, 232, 232);
   flex-wrap: wrap;
 }
 
-@mixin flex_wrap_between{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-
+@mixin flex_wrap_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 @mixin backgrondImg {
@@ -76,211 +75,197 @@ $grey: rgb(232, 232, 232);
   height: 100%;
 }
 
-
-.favourite_card{
-    @include flex_row()
+.favourite_card {
+  @include flex_row();
 }
 
-.favourite_text{
-    @include flex_column_start()
+.favourite_text {
+  @include flex_column_start();
 }
 
-.favourite_card{
-    margin: 10px;
-    position: relative;
-    border-radius: $rounded-edge;
-    background-color: $red;
-    max-width: 350px;
-    padding: 0.6rem;
-    background-color: $light_bg;
-    border: 1px solid $light_green;
-    width: 100%;
-    .favourite_img{
-        width: 100px;
-        height: 100px;
-        border-radius: $circle;
-        border: 2px solid $accent_color;
-    }
-}
-
-
-.favourite_like{
-    @include flex_column()
-}
-
-.favourite_like{
-    background-color: rgba(255, 255, 255, 0.735);
-    border: 1px solid $orange;
-    padding: 2px;
-    width: 30px;
-    height: 30px;
-    border-radius: $rounded-edge;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-}
-
-.popup_container.inactive{
-    display: none;
-}
-
-.popup_container.active{
-    background-color: rgba(255, 255, 255, 0.902);
-    padding: 10px;
-    z-index: 1;
-    border-radius: $rounded-edge;
+.favourite_card {
+  margin: 10px;
+  position: relative;
+  border-radius: $rounded-edge;
+  background-color: $red;
+  max-width: 350px;
+  padding: 0.6rem;
+  background-color: $light_bg;
+  border: 1px solid $light_green;
+  width: 100%;
+  .favourite_img {
     width: 100px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
+    height: 100px;
+    border-radius: $circle;
+    border: 2px solid $accent_color;
+  }
 }
 
-.popup_btn{
-    background-color: transparent;
-    border: 0;
-    padding: 7px 0;
+.favourite_like {
+  @include flex_column();
 }
 
-
-.dowload_option:hover{
-    color: $accent_color;
+.favourite_like {
+  background-color: rgba(255, 255, 255, 0.735);
+  border: 1px solid $orange;
+  padding: 2px;
+  width: 30px;
+  height: 30px;
+  border-radius: $rounded-edge;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 
-.remove_option:hover{
-    color: $orange;
+.popup_container.inactive {
+  display: none;
+}
+
+.popup_container.active {
+  background-color: rgba(255, 255, 255, 0.902);
+  padding: 10px;
+  z-index: 1;
+  border-radius: $rounded-edge;
+  width: 100px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  a:-webkit-any-link {
+    padding: 0;
+  }
+}
+
+.popup_btn {
+  background-color: transparent;
+  border: 0;
+  padding: 7px 0;
+}
+
+.dowload_option:hover {
+  color: $accent_color;
+}
+
+.remove_option:hover {
+  color: $orange;
 }
 
 .card_container {
-    @include flex_wrap();
-  }
+  @include flex_wrap();
+}
 
-  .card_container{
-    padding: 1.5rem;
-   }
+.card_container {
+  padding: 1.5rem;
+}
 
+.remove_modal_container.inactive {
+  display: none;
+}
 
-   .remove_modal_container.inactive{
-    display: none;
-   }
+.remove_modal_container {
+  @include flex_column();
+}
 
+.remove_modal_container {
+  background-color: rgba(0, 0, 0, 0.368);
+  padding: 10px;
+  border-radius: $rounded-edge;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
 
-   .remove_modal_container{
-    @include flex_column()
-   }
-
-  
-   .remove_modal_container{
-    background-color: rgba(0, 0, 0, 0.368);
-    padding: 10px;
+  .remove_modal {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
     border-radius: $rounded-edge;
-    position: fixed;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
+    width: 300px;
+    position: relative;
 
-
-   
-    .remove_modal{
-      background-color: white;
-      padding: 20px;
-      text-align: center;
-      border-radius: $rounded-edge;
-      width: 300px;
-      position: relative;
-
-
-      
-     .cancel_modal{
+    .cancel_modal {
       width: 30px;
       height: 30px;
       position: absolute;
       right: 15px;
       top: 15px;
       margin-bottom: 10px;
-   }
-       
-      h4{
-        color: $accent_color;
-        padding: 2rem 0rem;
-      }
-      p{
-        color: black;
-        padding: 1.5rem 0;
-      }
-      .confirm_btn{
-        background-color: $accent_color;
-        color: white;
-        border-radius: $rounded-edge;
-        border: 0px;
-        padding: 10px 1rem;
-        font-weight: 600;
-      }
-     }
+    }
 
-   }
-
-   .fav_lazy_loading{
-    @include flex()
+    h4 {
+      color: $accent_color;
+      padding: 2rem 0rem;
+    }
+    p {
+      color: black;
+      padding: 1.5rem 0;
+    }
+    .confirm_btn {
+      background-color: $accent_color;
+      color: white;
+      border-radius: $rounded-edge;
+      border: 0px;
+      padding: 10px 1rem;
+      font-weight: 600;
+    }
   }
-  
-  .fav_lazy_loading{
-    background-color: $grey;
-    max-width: 350px;
-    margin-bottom: 30px;
-    border-radius: $rounded-edge;
-    padding: 15px;
-  
-   .img{
+}
+
+.fav_lazy_loading {
+  @include flex();
+}
+
+.fav_lazy_loading {
+  background-color: $grey;
+  max-width: 350px;
+  margin-bottom: 30px;
+  border-radius: $rounded-edge;
+  padding: 15px;
+
+  .img {
     width: 100px;
     height: 100px;
     border-radius: $circle;
-   }
-  
-   .lazy_text{
+  }
+
+  .lazy_text {
     display: flex;
     justify-content: space-between;
     align-items: start;
     flex-direction: column;
-   }
-  
-   .lazy_text{
+  }
+
+  .lazy_text {
     padding-left: 30px;
-   }
-  
-   .title{
+  }
+
+  .title {
     width: 150px;
     height: 30px;
     margin-bottom: 20px;
-   }
-  
-   .difficulty{
+  }
+
+  .difficulty {
     width: 40px;
     height: 20px;
-   }
-  
   }
-  
-
- 
+}
 
 @media screen and (min-width: 768px) {
-    .card_container{
-        @include flex_wrap_between()
-      }
+  .card_container {
+    @include flex_wrap_between();
+  }
 
-      .card_container{
-        padding: 2.4rem;
-       }
+  .card_container {
+    padding: 2.4rem;
+  }
 }
-
 
 @media screen and (min-width: 1024px) {
-    .card_container{
-        padding: 3.4rem;
-       }
+  .card_container {
+    padding: 3.4rem;
+  }
 }
-
