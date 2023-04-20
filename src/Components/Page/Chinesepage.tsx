@@ -13,7 +13,7 @@ export const Chinesepage = () => {
     method: "GET",
     url: "https://chinese-food-db.p.rapidapi.com/",
     headers: {
-      // "X-RapidAPI-Key": "5312ed048amsh03ba71e9c5ebb31p10336djsnc538ae0495e9",
+      "X-RapidAPI-Key": "5312ed048amsh03ba71e9c5ebb31p10336djsnc538ae0495e9",
       "X-RapidAPI-Host": "chinese-food-db.p.rapidapi.com",
       // X-RapidAPI-Key': '5312ed048amsh03ba71e9c5ebb31p10336djsnc538ae0495e9
       // X-RapidAPI-Key': '5312ed048amsh03ba71e9c5ebb31p10336djsnc538ae0495e9

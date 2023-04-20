@@ -1,5 +1,6 @@
 // VARIABLES
 $accent_color: green;
+$dark_text:rgb(0, 31, 0);
 $red: red;
 $nav_background: rgba(0, 0, 0, 0.817);
 $z-10: 10;
@@ -320,8 +321,8 @@ a:-webkit-any-link {
   }
 
   .title {
-    font-size: 16px;
-    color: $accent_color;
+    font-size: 15px;
+    color: $orange;
   }
 
   .download:hover {
@@ -354,6 +355,15 @@ a:-webkit-any-link {
   color: white;
 }
 
+.copy_container{
+  width: 100%;
+}
+
+.copy_text{
+border-top: 2px solid white;
+
+}
+
 .footer_items {
   padding-bottom: 2rem;
   padding-top: 1rem;
@@ -379,6 +389,18 @@ a:-webkit-any-link {
 
 .footer_link_item:hover {
   color: $accent_color;
+}
+
+.icon_container{
+  @include flex_row()
+}
+
+.icon_container{
+  padding-top: 1.4rem;
+}
+
+.copy_text{
+  padding-top: 2rem;
 }
 
 .download_container {
@@ -459,6 +481,7 @@ input {
   }
 }
 
+
 @media screen and (min-width: 768px) {
   .banner_header {
     font-size: 3.5rem;
@@ -468,7 +491,7 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    padding-top: 2rem;
+    flex-direction: column;
   }
 
   .banner_text {
@@ -509,7 +532,7 @@ input {
     margin-left: 10px;
 
     .title {
-      font-size: 20px;
+      font-size: 17px;
     }
 
     .recipe_img {
@@ -563,6 +586,23 @@ input {
       width: 50px;
       height: 30px;
     }
+  }
+
+  .footer_app{
+    .h3{
+      padding: 1rem 0;
+    }
+  }
+
+  .footer_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+  }
+
+  .copy_container{
+    text-align: center;
   }
 }
 
