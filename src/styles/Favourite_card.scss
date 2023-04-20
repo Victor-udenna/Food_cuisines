@@ -168,7 +168,6 @@ $grey: rgb(232, 232, 232);
 .remove_modal_container {
   background-color: rgba(0, 0, 0, 0.368);
   padding: 10px;
-  border-radius: $rounded-edge;
   position: fixed;
   top: 0px;
   bottom: 0px;
@@ -178,6 +177,7 @@ $grey: rgb(232, 232, 232);
   width: 100%;
   z-index: 10;
 
+
   .remove_modal {
     background-color: white;
     padding: 20px;
@@ -185,6 +185,9 @@ $grey: rgb(232, 232, 232);
     border-radius: $rounded-edge;
     width: 300px;
     position: relative;
+    animation-name: animatemodal;
+    animation-duration: .5s;
+
 
     .cancel_modal {
       width: 30px;
@@ -211,6 +214,18 @@ $grey: rgb(232, 232, 232);
       padding: 10px 1rem;
       font-weight: 600;
     }
+  }
+}
+
+@keyframes animatemodal {
+  from{
+      top: -300px;
+      opacity: 0;
+  }
+
+  to{
+      top: 50%;
+      opacity: 1;
   }
 }
 

@@ -7,32 +7,36 @@ import { FoodCard } from "../Template/FoodCard";
 import { useQuery } from "react-query";
 import axios from "axios";
 import { Card_lazyloading } from "../Template/Card_lazyloading";
+import Fooddata from "../../data/Topfood.json";
+import Topfooddata from "../../data/Topfood.json";
 
 export const Veganpage = () => {
+  let vegan = Topfooddata.Vegan_food;
+
   const [foodData, setFoodData] = useState([]);
+  // const options = {
+  //   method: "GET",
+  //   url: "https://the-vegan-recipes-db.p.rapidapi.com/",
+  //   headers: {
+  //     // "X-RapidAPI-Key": "2eb9578c9emsh80336b04e9b9b41p1b565ajsnec3d31f4b6b2",
+  //     "X-RapidAPI-Host": "the-vegan-recipes-db.p.rapidapi.com",
+  //   },
+  // };
 
-  const options = {
-    method: "GET",
-    url: "https://the-vegan-recipes-db.p.rapidapi.com/",
-    headers: {
-      "X-RapidAPI-Key": "2eb9578c9emsh80336b04e9b9b41p1b565ajsnec3d31f4b6b2",
-      "X-RapidAPI-Host": "the-vegan-recipes-db.p.rapidapi.com",
-    },
-  };
+  // const getVeganfood = () => {
+  //   axios
+  //     .request(options)
+  //     .then(function (response) {
+  //       setFoodData(response.data);
+  //     })
+  //     .catch(function (error) {
+  //       console.error(error);
+  //     });
+  // };
 
-  const getVeganfood = () => {
-    axios
-      .request(options)
-      .then(function (response) {
-        setFoodData(response.data);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-  };
+  // const { status, data } = useQuery("food", getVeganfood);
+  // console.log(status);
 
-  const { status, data } = useQuery("food", getVeganfood);
-  console.log(status);
 
   return (
     <Fragment>
@@ -48,6 +52,19 @@ export const Veganpage = () => {
       <section>
         <h2 className="food_header">Our Vegetarian Recipes</h2>
         <div className="card_container">
+{
+vegan.map((item)=>{
+  return (
+    <FoodCard
+    id={item.id}
+    difficulty={item.difficulty}
+    title={item.title}
+    image={item.image}/>
+  )
+})
+}
+        </div>
+        {/* <div className="card_container">
           {status === "success" &&
             foodData?.map((item: any, i: number) => {
               if (i < 30) {
@@ -65,7 +82,7 @@ export const Veganpage = () => {
 
           {status === "loading" && <Card_lazyloading />}
           {status === "error" && <div>Error getting recipe</div>}
-        </div>
+        </div> */}
       </section>
       <Footer />
     </Fragment>

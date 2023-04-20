@@ -16,7 +16,7 @@ export const Cocktailpage = () => {
     method: "GET",
     url: "https://the-cocktail-db3.p.rapidapi.com/",
     headers: {
-      "X-RapidAPI-Key": "2eb9578c9emsh80336b04e9b9b41p1b565ajsnec3d31f4b6b2",
+      // "X-RapidAPI-Key": "2eb9578c9emsh80336b04e9b9b41p1b565ajsnec3d31f4b6b2",
       "X-RapidAPI-Host": "the-cocktail-db3.p.rapidapi.com",
     },
   };

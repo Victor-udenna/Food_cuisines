@@ -3,10 +3,10 @@ import { dataType } from "../../types/datatypes";
 import "../../styles/modal.scss";
 import { CgLoadbar } from "react-icons/cg";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-import { MdDownloadForOffline } from "react-icons/md";
 import axios from "axios";
 import { Page, Document, Text, PDFDownloadLink } from "@react-pdf/renderer";
 import { Link } from "react-router-dom";
+import {TbCloudDownload} from 'react-icons/tb';
 
 export const FoodCard = (props: dataType) => {
   const [modal, setmodal] = useState(false);
@@ -45,7 +45,7 @@ export const FoodCard = (props: dataType) => {
           </h3>
           <p className="difficulty">
             {" "}
-            <b className="recipe_header">Difficulty:</b>
+            <b className="recipe_header">Difficulty: </b>
             {props.difficulty}
           </p>
           <span className="card_badge">Free</span>
@@ -57,7 +57,7 @@ export const FoodCard = (props: dataType) => {
             )}
           </span>
           <span className="download_icon pointer" onClick={displaymodal}>
-            <MdDownloadForOffline color="orange" size={27} />
+            <TbCloudDownload color="orange" size={27} />
           </span>
         </div>
 
