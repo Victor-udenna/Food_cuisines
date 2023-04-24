@@ -1,7 +1,10 @@
 import React from "react";
-import { BsFacebook, BsPinterest, BsReddit } from "react-icons/bs";
-import { AiFillTwitterCircle, AiFillInstagram } from "react-icons/ai";
+import { BsTelephone } from "react-icons/bs";
+import {FaFacebook} from "react-icons/fa";
+import { AiFillTwitterCircle, AiFillInstagram, AiOutlineMail} from "react-icons/ai";
+
 import logo from "../../assets/images/logo (1).png";
+import '../../styles/Footer.scss';
 
 export const Footer = () => {
   return (
@@ -10,16 +13,21 @@ export const Footer = () => {
 
 <section className="footer_content">
 
-<div>
+
         <div className="footer_items">
-          <h3>About us</h3>
-          <div>
+
+<div className="brand_container">
+<div className="footer_logo">
             <img src={logo} className="app_logo" alt="" />
           </div>
-          <p className="logo_text">Kuisiene</p>
+          <p className="brand_text">
+           Cuisine
+          </p>
+</div>
+          <p className="brand_description">Learn, Create and Share
+          <br/>
+          your favourite meal</p>
         </div>
-      </div>
-
 
 
 
@@ -33,22 +41,41 @@ export const Footer = () => {
       </div>
 
 
+<div className="footer_items">
+   <h3>Services</h3>
+   <ul className="footer_link_container">
+   <li className="footer_link_item">About Us</li>
+    <li className="footer_link_item">Contact Us</li>
+    <li className="footer_link_item">Feature</li>
+   </ul>
+</div>
+
+
       <div className="footer_items">
         <h3>Contact</h3>
         <ul className="footer_link_container">
-          <li className="footer_link_item">cuisinefood@gmail.co</li>
-          <li className="footer_link_item">+(234)8 085 265743</li>
+          <div className="footer_link_item">
+          <p></p>
+            <p>cuisinefood@gmail.co</p>
+           
+          </div>
+          <div className="footer_link_item">
+          <p></p>
+            <p>+(234)8 085 265743</p>
+           
+
+          </div>
           <li className="icon_container">
-            <div className="">
-<BsFacebook size={25}/>
+            <div className="icon">
+<FaFacebook size={20}/>
             </div>
 
-            <div>
-              <AiFillInstagram size={25}/>
+            <div className="icon">
+              <AiFillInstagram size={20}/>
               </div>
 
-              <div>
-              <AiFillTwitterCircle size={25}/>
+              <div className="icon">
+              <AiFillTwitterCircle size={20}/>
               </div>
           </li>
         </ul>

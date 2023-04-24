@@ -1,0 +1,190 @@
+// VARIABLES
+$accent_color: green;
+$dark_text:rgb(0, 31, 0);
+$red: red;
+$nav_background: rgba(0, 0, 0, 0.817);
+$z-10: 10;
+$circle: 50%;
+$rounded-edge: 1rem;
+$light_green: rgb(119, 199, 119);
+$light_bg: honeydew;
+$light_orange: rgb(255, 222, 161);
+$orange_border: rgb(255, 183, 50);
+$orange: orange;
+$grey: rgb(181, 181, 181);
+
+// Mixin
+
+@mixin list {
+  list-style: none;
+  padding: 0;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@mixin flex_column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin flex_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin flex_wrap_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin backgrondImg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin overlay {
+  background-color: rgba(0, 0, 0, 0.329);
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.app_footer{
+    background-color: $nav_background;
+    color: white;
+    padding: 2rem 1rem;
+
+
+    h3{
+        color: $grey;
+        padding-bottom: 1.2rem;
+    }
+
+    .footer_link_item{
+        color: white;
+        font-size: 12px;
+        padding-bottom: 1rem;
+    }
+
+    .brand_description{
+     font-size: 12px;
+     text-align: center;
+    }
+}
+
+
+.footer_content{
+    @include flex_column()
+}
+
+.footer_content{
+    text-align: center;
+}
+
+.brand_container{
+    @include flex_column()
+}
+
+.brand_container{
+    padding-bottom: .7rem;
+}
+
+.brand_text{
+    color: white;
+    font-weight: 600;
+    padding-left: 10px;
+    font-style: oblique;
+  }
+
+  .footer_items{
+    padding-bottom: 1.2rem;
+  }
+
+.icon_container{
+    @include flex_row()
+  }
+
+  .footer_link_container{
+    list-style: none;
+  }
+
+.icon_container{
+
+    width: 200px;
+    margin: auto;
+
+    padding-top: 1.4rem;
+    .icon{
+      padding-top: 1rem;
+    }
+  }
+
+  .copy_container{
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .test{
+    @include flex_row()
+  }
+
+
+  .copy_text{
+  border-top: 1px solid white;
+  color: $grey;
+  padding-top: 2rem;
+  font-size: 10px;
+  
+  }
+
+  @media screen and (min-width: 768px){
+    .app_footer{
+        padding: 4rem 2rem;
+    }
+  }
+
+
+  @media screen and (min-width: 1024px){
+.footer_content{
+@include flex_row()
+}
+
+.footer_content{
+    align-items: start;
+}
+
+.brand_text{
+    text-align: center !important;
+}
+
+.footer_items{
+    text-align: start;
+}
+
+.icon_container{
+    padding-top: 0px;
+    width: 120px;
+}
+  }

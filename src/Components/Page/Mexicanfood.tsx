@@ -7,6 +7,7 @@ import { FoodCard } from "../Template/FoodCard";
 import { useQuery } from "react-query";
 import axios from "axios";
 import { Card_lazyloading } from "../Template/Card_lazyloading";
+import { PageTitle } from "../Atom/PageTitle";
 
 export const Mexicanfood = () => {
   const [foodData, setFoodData] = useState<any>([]);
@@ -49,7 +50,7 @@ export const Mexicanfood = () => {
         />
         <TopMexican />
         <section>
-          <h2 className="food_header">Our Mexican recipes</h2>
+          <PageTitle pagetitle="Our Mexican recipes"/>
           <div className="card_container">
             {status === "success" &&
               foodData?.map((items: any, i: number) => {

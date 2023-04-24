@@ -17,21 +17,31 @@ export const FoodCard = (props: dataType) => {
   };
 
   const handlelike = () => {
-    setLiked(!liked);
+    setLiked(false);
     console.log(liked);
-
     if (liked === true) {
       axios.post("http://localhost:3000/liked_foods", {
         title: props.title,
         difficulty: props.difficulty,
         image: props.image,
       });
-    }
-
-    if (liked === false) {
+    } else {
       axios.delete(`http://localhost:3000/liked_foods/${props.id}`);
+      console.log("delete", props.id)
     }
   };
+
+  useEffect(()=>{
+      axios.get("http://localhost:3000/liked_foods")
+      .then((res)=>{
+        res.data.map((item: dataType)=>{
+          console.log(item.title)
+          if (item.title === props.title){
+            setLiked(false)
+          }
+        })
+      })
+  }, [liked])
 
   return (
     <Fragment>
@@ -44,8 +54,6 @@ export const FoodCard = (props: dataType) => {
             {props.title}
           </h3>
           <p className="difficulty">
-            {" "}
-            <b className="recipe_header">Difficulty: </b>
             {props.difficulty}
           </p>
           <span className="card_badge">Free</span>
@@ -57,7 +65,7 @@ export const FoodCard = (props: dataType) => {
             )}
           </span>
           <span className="download_icon pointer" onClick={displaymodal}>
-            <TbCloudDownload color="orange" size={27} />
+            <TbCloudDownload color="green" size={27} />
           </span>
         </div>
 

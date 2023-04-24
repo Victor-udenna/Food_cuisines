@@ -37,7 +37,6 @@ $overlay: rgba(0, 0, 0, 0.402);
   justify-content: center;
   flex-direction: column;
 }
-
 @mixin flex_wrap {
   display: flex;
   justify-content: space-between;
@@ -50,7 +49,6 @@ $overlay: rgba(0, 0, 0, 0.402);
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 @mixin overlay {
   background-color: rgba(0, 0, 0, 0.329);
   content: "";
@@ -61,15 +59,12 @@ $overlay: rgba(0, 0, 0, 0.402);
   width: 100%;
   height: 100%;
 }
-
 .favourite_header::before {
   @include overlay();
 }
-
 .favourite_h1 {
   padding: 2.2rem 1rem;
 }
-
 .favourite_header {
   text-align: center;
   padding: 2.2rem 1rem;
@@ -93,12 +88,82 @@ $overlay: rgba(0, 0, 0, 0.402);
     position: relative;
   }
 }
-
 .like_img {
   width: 100px;
   z-index: $z-10;
   position: relative;
 }
+
+.delete_all_btn{
+  border: 0;
+  background-color: inherit;
+  padding-right: 1.5rem;
+}
+
+
+.remove_all_container.active{
+  @include flex_column()
+}
+
+.remove_all_container.active{
+  background-color: rgba(0, 0, 0, 0.368);
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+
+  .remove_all_modal{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: $rounded-edge;
+    width: 300px;
+    // position: relative;
+  }
+  
+  h4 {
+    color: $orange;
+    padding: 2rem 0rem;
+  }
+  p {
+    color: black;
+    padding: 1.5rem 0;
+  }
+
+  button{
+    padding: 10px;
+    font-weight: 600;
+    width: 100px;
+    border-radius: 10px;
+    margin: 0px 10px;
+
+  }
+
+  .confirm{
+    background-color: orange;
+ border: 1px solid orange;
+ color: white;
+
+  }
+
+  .cancel {
+    
+    color: black;
+    border: 1px solid black;
+  }
+}
+
+.remove_all_container.inactive{
+display: none;
+}
+
+
 
 @media screen and (min-width: 768px) {
   .like_img {
@@ -125,9 +190,12 @@ $overlay: rgba(0, 0, 0, 0.402);
       margin-left: 14px;
     }
   }
-
   .favourite_text {
     padding: 10px 1rem;
+  }
+
+  .delete_all_btn{
+    padding-right: 2.4rem;
   }
 }
 
@@ -141,4 +209,30 @@ $overlay: rgba(0, 0, 0, 0.402);
       font-size: 4.5rem;
     }
   }
+
+  .delete_all_btn{
+    padding-right: 3.4rem;
+  }
+}
+
+.no_data{
+  @include flex_column()
+}
+
+.no_data{
+img{
+  width: 100%;
+  height: auto;
+  max-width: 650px;
+  margin: auto;
+}
+
+
+
+h3{
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+
 }

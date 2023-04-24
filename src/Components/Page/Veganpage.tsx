@@ -7,7 +7,7 @@ import { FoodCard } from "../Template/FoodCard";
 import { useQuery } from "react-query";
 import axios from "axios";
 import { Card_lazyloading } from "../Template/Card_lazyloading";
-import Topfooddata from "../../data/Topfood.json";
+import { PageTitle } from "../Atom/PageTitle";
 
 export const Veganpage = () => {
 
@@ -47,9 +47,9 @@ export const Veganpage = () => {
       />
       <Topvegan />
       <section>
-        <h2 className="food_header">Our Vegetarian Recipes</h2>
+        <PageTitle pagetitle="Our Vegetarian Recipes"/>
 
-        <div className="card_container">
+        { <div className="card_container">
           {status === "success" &&
             foodData?.map((item: any, i: number) => {
               if (i < 30) {
@@ -67,7 +67,7 @@ export const Veganpage = () => {
 
           {status === "loading" && <Card_lazyloading />}
           {status === "error" && <div>Error getting recipe</div>}
-        </div>
+        </div> }
       </section>
       <Footer />
     </Fragment>

@@ -1,0 +1,235 @@
+$accent_color: green;
+$red: red;
+$nav_background: rgba(0, 0, 0, 0.817);
+$z-10: 10;
+$circle: 50%;
+$rounded-edge: 1rem;
+$light_green: rgb(119, 199, 119);
+$light_bg: honeydew;
+$light_orange: rgb(255, 222, 161);
+$orange_border: rgb(255, 183, 50);
+$orange: orange;
+$grey: rgb(232, 232, 232);
+
+// Mixin
+
+@mixin list {
+  list-style: none;
+  padding: 0;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@mixin flex_column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin flex_column_start {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin flex_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin flex_wrap_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+@mixin backgrondImg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin overlay {
+  background-color: rgba(0, 0, 0, 0.329);
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pricing_component{
+ @include flex_column()
+}
+
+.pricing_component{
+    padding: 4rem 1rem;
+}
+
+.pricing_header{
+    text-align: center;
+    p{
+        padding: 20px 0px;
+    }
+}
+
+.price_switch{
+   @include flex_row()
+}
+
+.price_switch{
+    background-color: $grey;
+    width: 230px;
+    border-radius: $rounded-edge;
+    margin: 10px 0px 20px 0px;
+    button{
+        width: 100px;
+        height: auto;
+        padding: 10px;
+        border-radius: $rounded-edge;
+        border: none;
+        font-weight: bold;
+    }
+}
+
+.yearly_btn.active, .monthly_btn.active{
+background-color: white;
+ border: 1px solid $accent_color;
+}
+
+.monthly_btn.inactive, .yearly_btn.inactive{
+    background-color: $grey;
+    font-size: 12px;
+    color: $accent_color;
+}
+
+
+
+.pricing_card_container{
+    @include flex_column()
+}
+
+
+.pricing_card{
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem 0px;
+    height: 600px;
+    padding: 0.7rem;
+    .price_container{
+        padding: 20px 0;
+    }
+    .price{
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    .pricing_item{
+        padding-bottom: 0.9rem;
+    }
+
+    h4{
+        font-size: 2rem;
+        padding: 20px 0px;
+    }
+  .pricing_btn_container{
+   width: 100%;
+  }
+    button{
+        width: 100%;
+        padding: 15px;
+        font-weight: bold;
+        border-radius: $rounded-edge;
+        border: none;
+    }
+}
+.price_list_container{
+    padding: 1.4rem 0px;
+}
+
+
+.free_card{
+    background-color: white;
+   border: 1px solid $grey;
+
+   .duration{
+    color: $accent_color;
+   }
+    button{
+        color: black;
+        background-color: white;
+        border: 1px solid $accent_color;
+    }
+}
+
+.premium_card{
+    background-color: $nav_background;
+    border: 1px solid $nav_background;
+    color: white;
+    .duration{
+        color: $light_green;
+       }
+    button{
+        background-color: $accent_color;
+        color: white;
+        border: 1px solid $accent_color;
+    }  
+}
+
+
+@media screen and (min-width: 768px){
+    .pricing_card_container{
+        @include flex_row()
+    }
+
+.free_card{
+    margin: 2rem 1rem 2rem 0px;
+}
+
+.premium_card{
+    margin: 2rem 0px 2rem 1rem;
+}
+
+.pricing_component{
+    padding: 5rem 1rem;
+}
+    
+}
+
+
+@media screen and (min-width: 900px){
+   .pricing_component{
+    padding: 5rem 3rem;
+   } 
+}
+
+@media screen and (min-width: 1024px){
+    .free_card{
+        margin: 3rem 3rem 3rem 0px;
+    }
+    
+    .premium_card{
+        margin: 3rem 0px 3rem 2rem;
+    }   
+}

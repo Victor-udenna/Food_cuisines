@@ -257,9 +257,6 @@ a:-webkit-any-link {
   @include flex_wrap_between();
 }
 
-.recipe_header {
-  color: $accent_color;
-}
 
 .mexican_page {
   position: relative;
@@ -295,38 +292,38 @@ a:-webkit-any-link {
 }
 
 .card {
-  background: honeydew;
   padding: 3px 10px 1px 0px;
   font-size: 14px;
   width: 100%;
   border-radius: $rounded-edge;
-  height: 190px;
-  border: 1px solid $light_green;
+  height: 160px;
+  border: 2px solid $grey;
   max-width: 350px;
   margin-bottom: 2.4rem;
 
   .recipe_img {
     width: 120px;
-    height: 100%;
+    height: 158px;
     margin-top: 2px;
-    margin-left: 10px;
     align-items: center;
     border-radius: $rounded-edge 0 0 $rounded-edge;
     margin-right: 10px;
   }
-  .title,
-  .food_id {
+  .title{
     padding: 6px 0;
     font-weight: bold;
+    font-size: 15px;
   }
 
-  .title {
-    font-size: 15px;
-    color: $orange;
-  }
 
   .download:hover {
     color: $orange;
+  }
+
+  .difficulty{
+     position: absolute;
+     bottom: 18px;
+     right: 100px;
   }
 }
 
@@ -345,33 +342,7 @@ a:-webkit-any-link {
   right: 50px;
 }
 
-.app_footer {
-  padding: 2rem 1.5rem;
-  text-align: justify;
-}
 
-.app_footer {
-  background-color: $nav_background;
-  color: white;
-}
-
-.copy_container{
-  width: 100%;
-}
-
-.copy_text{
-border-top: 2px solid white;
-
-}
-
-.footer_items {
-  padding-bottom: 2rem;
-  padding-top: 1rem;
-}
-
-.footer_items h3 {
-  padding-bottom: 10px;
-}
 
 .logo_text {
   color: $accent_color;
@@ -379,29 +350,12 @@ border-top: 2px solid white;
   padding-left: 10px;
 }
 
-.footer_link_item {
-  padding-bottom: 10px;
+
+.mail{
+  background-color: $red;
 }
 
-.footer_link_container {
-  list-style-type: none;
-}
 
-.footer_link_item:hover {
-  color: $accent_color;
-}
-
-.icon_container{
-  @include flex_row()
-}
-
-.icon_container{
-  padding-top: 1.4rem;
-}
-
-.copy_text{
-  padding-top: 2rem;
-}
 
 .download_container {
   width: 320px;
@@ -427,20 +381,6 @@ input {
   border: none;
 }
 
-.download_btn {
-  transition: 0.3s;
-  font-size: 1.2rem;
-  padding: 12px 10px;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  background-color: $orange;
-  box-shadow: 0px 0px 3px #ffab04;
-  cursor: pointer;
-  color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 50%;
-}
 
 .card_lazy_loading {
   @include flex();
@@ -487,13 +427,6 @@ input {
     font-size: 3.5rem;
   }
 
-  .app_footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-direction: column;
-  }
-
   .banner_text {
     font-size: 20px;
   }
@@ -522,10 +455,10 @@ input {
   }
 
   .card {
-    background: honeydew;
     border-radius: $rounded-edge;
     height: 350px;
-    border: 1px solid $light_green;
+    border: 1px solid $grey;
+    padding: 0 10px;
     max-width: 210px;
     margin-bottom: 2.4rem;
     text-align: center;
@@ -588,18 +521,16 @@ input {
     }
   }
 
+
   .footer_app{
     .h3{
       padding: 1rem 0;
     }
   }
 
-  .footer_content{
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    width: 100%;
-  }
+
+
+
 
   .copy_container{
     text-align: center;
@@ -617,8 +548,7 @@ input {
     @include flex_row;
   }
 
-  .desktop_nav,
-  .app_footer {
+  .desktop_nav {
     padding: 0.1rem 3rem;
   }
 
@@ -640,11 +570,9 @@ input {
   .banner_header {
     font-size: 5rem;
   }
-
   .banner_text {
     font-size: 25px;
   }
-
   .Topfood_header {
     margin-top: 2rem;
     margin-bottom: 3rem;
@@ -654,13 +582,11 @@ input {
     width: 380px;
     left: 50%;
   }
-
   .download_btn {
     width: 70px;
     height: 70px;
     font-size: 22px;
   }
-
   .card_container .Topfood_cardcontainer {
     padding: 3.4rem;
   }
@@ -719,5 +645,4 @@ input {
   100% {
     background-position: 100% 9%;
   }
-  /*     100%{background-position:0% 92%} */
 }

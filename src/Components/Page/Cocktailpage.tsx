@@ -8,9 +8,11 @@ import { FoodCard } from "../Template/FoodCard";
 import fooddata from "../../data/Topfood.json";
 import { Card_lazyloading } from "../Template/Card_lazyloading";
 import { useQuery } from "react-query";
+import { PageTitle } from "../Atom/PageTitle";
 
 export const Cocktailpage = () => {
   const [foodData, setFoodData] = useState([]);
+
 
   const options = {
     method: "GET",
@@ -45,9 +47,9 @@ export const Cocktailpage = () => {
         }}
       />
       <Topcocktail />
-      <section>
-        <h2 className="food_header">Our Cocktails Recipes</h2>
+      <PageTitle pagetitle="Our Cocktail recipes"/>
 
+      <section>
         <div className="card_container">
           {status === "success" &&
             foodData?.map((item: any, i: number) => {

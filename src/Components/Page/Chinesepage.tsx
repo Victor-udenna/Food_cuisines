@@ -6,6 +6,7 @@ import { Footer } from "../Template/Footer";
 import { Topchinese } from "../Template/Topchinese";
 import { FoodCard } from "../Template/FoodCard";
 import { useQuery } from "react-query";
+import { PageTitle } from "../Atom/PageTitle";
 
 export const Chinesepage = () => {
   const [foodData, setfoodData] = useState<any>([]);
@@ -47,7 +48,7 @@ export const Chinesepage = () => {
       />
       <Topchinese />
       <section className="">
-        <h2 className="food_header">Our chinese Recipes</h2>
+        <PageTitle pagetitle="Our Chinese recipes"/>
         <div className="card_container">
           {status === "success" &&
             foodData?.map((item: any, i: number) => {
