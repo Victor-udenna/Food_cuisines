@@ -8,6 +8,7 @@ import { useQuery } from "react-query";
 import axios from "axios";
 import { Card_lazyloading } from "../Template/Card_lazyloading";
 import { PageTitle } from "../Atom/PageTitle";
+import { Errormessage } from "../Organism/Errormessage";
 
 export const Veganpage = () => {
 
@@ -49,10 +50,13 @@ export const Veganpage = () => {
       <section>
         <PageTitle pagetitle="Our Vegetarian Recipes"/>
 
-        { <div className="card_container">
+
+        <div>
+         <div className="card_container">
+
           {status === "success" &&
             foodData?.map((item: any, i: number) => {
-              if (i < 30) {
+              if (i < 15) {
                 return (
                   <FoodCard
                     key={item.id}
@@ -66,8 +70,9 @@ export const Veganpage = () => {
             })}
 
           {status === "loading" && <Card_lazyloading />}
-          {status === "error" && <div>Error getting recipe</div>}
-        </div> }
+          </div>
+          {status === "error" && <Errormessage/>}
+        </div> 
       </section>
       <Footer />
     </Fragment>

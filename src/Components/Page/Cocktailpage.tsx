@@ -5,14 +5,13 @@ import { Footer } from "../Template/Footer";
 import axios from "axios";
 import { Topcocktail } from "../Template/Topcocktail";
 import { FoodCard } from "../Template/FoodCard";
-import fooddata from "../../data/Topfood.json";
 import { Card_lazyloading } from "../Template/Card_lazyloading";
 import { useQuery } from "react-query";
 import { PageTitle } from "../Atom/PageTitle";
+import { Errormessage } from "../Organism/Errormessage";
 
 export const Cocktailpage = () => {
   const [foodData, setFoodData] = useState([]);
-
 
   const options = {
     method: "GET",
@@ -50,10 +49,13 @@ export const Cocktailpage = () => {
       <PageTitle pagetitle="Our Cocktail recipes"/>
 
       <section>
+
+        <div>
+
         <div className="card_container">
           {status === "success" &&
             foodData?.map((item: any, i: number) => {
-              if (i < 30) {
+              if (i < 15) {
                 return (
                   <FoodCard
                     key={item.id}
@@ -68,7 +70,8 @@ export const Cocktailpage = () => {
 
           {status === "loading" && <Card_lazyloading />}
 
-          {status === "error" && <div>Error getting recipe</div>}
+          {status === "error" && <Errormessage/>}
+          </div>
         </div>
       </section>
       <Footer />

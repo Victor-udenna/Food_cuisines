@@ -8,10 +8,12 @@ import { useQuery } from "react-query";
 import axios from "axios";
 import { Card_lazyloading } from "../Template/Card_lazyloading";
 import { PageTitle } from "../Atom/PageTitle";
+import fooddata from "../../data/Topfood.json";
+import { Errormessage } from "../Organism/Errormessage";
 
 export const Mexicanfood = () => {
   const [foodData, setFoodData] = useState<any>([]);
-
+let food = fooddata.allmexican_food;
   const options = {
     method: "GET",
     url: "https://the-mexican-food-db.p.rapidapi.com/",
@@ -51,10 +53,13 @@ export const Mexicanfood = () => {
         <TopMexican />
         <section>
           <PageTitle pagetitle="Our Mexican recipes"/>
+      
+
+          <div>
           <div className="card_container">
             {status === "success" &&
               foodData?.map((items: any, i: number) => {
-                if (i < 30) {
+                if (i < 15) {
                   return (
                     <FoodCard
                       key={items.id}
@@ -68,8 +73,8 @@ export const Mexicanfood = () => {
               })}
 
             {status === "loading" && <Card_lazyloading />}
-
-            {status === "error" && <div>Error getting recipe</div>}
+            </div>
+            {status === "error" && <Errormessage/>}
           </div>
         </section>
       </main>

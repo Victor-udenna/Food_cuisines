@@ -646,3 +646,16 @@ input {
     background-position: 100% 9%;
   }
 }
+
+.error_component{
+  @include flex_column()
+}
+
+.error_component{
+  padding: 4rem 10px;
+
+  img{
+    width: 100%;
+    max-width: 500px;
+  }
+}

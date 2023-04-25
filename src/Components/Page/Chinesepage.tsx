@@ -7,6 +7,8 @@ import { Topchinese } from "../Template/Topchinese";
 import { FoodCard } from "../Template/FoodCard";
 import { useQuery } from "react-query";
 import { PageTitle } from "../Atom/PageTitle";
+import { Card_lazyloading } from "../Template/Card_lazyloading";
+import { Errormessage } from "../Organism/Errormessage";
 
 export const Chinesepage = () => {
   const [foodData, setfoodData] = useState<any>([]);
@@ -49,10 +51,12 @@ export const Chinesepage = () => {
       <Topchinese />
       <section className="">
         <PageTitle pagetitle="Our Chinese recipes"/>
+
+        <div>
         <div className="card_container">
           {status === "success" &&
             foodData?.map((item: any, i: number) => {
-              if (i <= 30) {
+              if (i <= 15) {
                 return (
                   <FoodCard
                     key={item.id}
@@ -64,8 +68,9 @@ export const Chinesepage = () => {
                 );
               }
             })}
-          {status === "loading" && <div>loading....</div>}
-          {status === "error" && <div>Error getting recipe</div>}
+          {status === "loading" && <Card_lazyloading/>}
+          </div>
+          {status === "error" && <Errormessage/> }
         </div>
       </section>
       <Footer />

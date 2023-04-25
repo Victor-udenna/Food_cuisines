@@ -1,16 +1,22 @@
 {
   "liked_foods": [
     {
-      "title": "Pressure cooker refried beans",
+      "title": "Black bean chilli soup with corn dumplings",
       "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/vegan_api/2.jpg",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/2.jpg",
       "id": 1
     },
     {
-      "title": "Beetroot, spinach and coconut curry",
+      "title": "Fishcake tacos",
       "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/vegan_api/3.jpg",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/3.jpg",
       "id": 2
+    },
+    {
+      "title": "Pressure cooker refried beans",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/1.jpg",
+      "id": 3
     }
   ]
 }

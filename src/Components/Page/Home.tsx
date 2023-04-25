@@ -30,9 +30,9 @@ export const Home = () => {
   <br/>Cookbook For <span>Your Kitchen</span></h1>
 <p>with kuisine you can create your next meal <span>within 10mins</span> - Easy to understand</p>
 <div className="start_container">
-  <button className="start_btn">
+<a href="#getstarted">  <button className="start_btn">
     Get started
-  </button>
+  </button></a>
 </div>
 </div>
 <div className="header_img_container">
@@ -75,7 +75,7 @@ export const Home = () => {
 </div>
 </section>
 
-<section className="category_container">
+<section id="getstarted" className="category_container">
 
 <h2>Food Category</h2>
 

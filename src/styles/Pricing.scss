@@ -120,8 +120,6 @@ background-color: white;
     color: $accent_color;
 }
 
-
-
 .pricing_card_container{
     @include flex_column()
 }
@@ -133,6 +131,11 @@ background-color: white;
     margin: 2rem 0px;
     height: 600px;
     padding: 0.7rem;
+    position: relative;
+
+    a:-webkit-any-link {
+      padding: 0;
+    }
     .price_container{
         padding: 20px 0;
     }
@@ -162,6 +165,9 @@ background-color: white;
         font-weight: bold;
         border-radius: $rounded-edge;
         border: none;
+        cursor: pointer;
+        transition-duration: .3s;
+        transition-timing-function: ease-in;
     }
 }
 .price_list_container{
@@ -181,8 +187,13 @@ background-color: white;
         background-color: white;
         border: 1px solid $accent_color;
     }
-}
 
+    button:hover{
+        color: white;
+        background-color: black;
+        border: 1px solid white;
+    }
+}
 .premium_card{
     background-color: $nav_background;
     border: 1px solid $nav_background;
@@ -195,6 +206,11 @@ background-color: white;
         color: white;
         border: 1px solid $accent_color;
     }  
+     button:hover{
+        color: $accent_color;
+        background-color: white;
+        border: 1px solid $accent_color;
+     }
 }
 
 

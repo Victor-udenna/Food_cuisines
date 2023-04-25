@@ -10,13 +10,14 @@ import {HiArrowCircleDown} from "react-icons/hi";
 import axios from "axios";
 import { PageTitle } from "../Atom/PageTitle";
 import { Nodata } from "../Template/Nodata";
+import { Errormessage } from "../Organism/Errormessage";
 
 
 type deleteData = {
   title : string
   image: string
   difficulty: string
-  id: string
+  id: number
 }
 
 
@@ -45,9 +46,6 @@ export const Favouritepage = () => {
   const confirmDelete =()=>{
     setdeletemodal(!deletemodal)
   }
-
-
-
 
 
   const { status, data } = useQuery(["liked_food"], getlikedFood);
@@ -108,7 +106,7 @@ export const Favouritepage = () => {
 
         {likedFood.length === 0 && <Nodata/>}
 
-        {status === "error" && <div>Error</div>}
+        {status === "error" && <Errormessage/>}
       </section>
 
 

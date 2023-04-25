@@ -1,5 +1,6 @@
 import React, {Fragment, useState} from 'react'
 import "../../styles/Pricing.scss";
+import { Link } from 'react-router-dom';
 
 export const AppPricing = () => {
 
@@ -45,14 +46,14 @@ export const AppPricing = () => {
 <p className='duration'>1 Month Trail</p>
 <p className=' price_container price'>$0</p>
 <ul className='price_list_container'>
-<li className="pricing_item">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-<li className="pricing_item">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-<li className="pricing_item">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-<li className="pricing_item">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-<li className="pricing_item">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+<li className="pricing_item">No activation fee ❤️</li>
+<li className="pricing_item">Get access to 60+ recipes</li>
+<li className="pricing_item">Preview recipe before download</li>
+<li className="pricing_item">No different theme option ❌</li>
+<li className="pricing_item">Not compatible with smartwathces</li>
 </ul>
 <div className='pricing_btn_container'>
-<button>Get Started</button>
+<Link to="/PremiumPage"><button>Get Started</button></Link>
 </div>
 </div>
 
@@ -61,14 +62,14 @@ export const AppPricing = () => {
 <p className='duration'>1 Month free</p>
 <p className="price_container"><span className='price'>${price}  </span> per <span>{duration}</span></p>
 <ul className='price_list_container'>
-<li className="pricing_item">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-<li className="pricing_item">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-<li className="pricing_item">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-<li className="pricing_item">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-<li className="pricing_item">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
+<li className="pricing_item">No activation fee ❤️</li>
+<li className="pricing_item">Get access to 1000+ recipes</li>
+<li className="pricing_item">View recipe details</li>
+<li className="pricing_item">Have access to various ui theme 🌘</li>
+<li className="pricing_item">Compatible with smartwatches. ⌚</li>
 </ul>
 <div className='pricing_btn_container'>
-<button>Get Started</button>
+<Link to="/PremiumPage"><button>Get Started</button></Link>
 </div>
 </div>
 

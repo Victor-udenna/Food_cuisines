@@ -109,15 +109,21 @@ max-height: 500px;
    padding-top: 1.3rem;
     }
 
+    a:-webkit-any-link {
+        padding: 0;
+      }
+
     button{
         color: $accent_color;
         background-color: white;
         border: 1px solid $accent_color;
         font-weight: bold;
         padding: 13px;
-        width: 100px;
+        width: 120px;
         border-radius: $rounded-edge;
         cursor: pointer;
+        transition-duration: .3s;
+        transition-timing-function: ease-in;
 
     }
 
@@ -155,6 +161,7 @@ padding-top: 3.2rem;
     border-radius: $rounded-edge;
     padding: 15px;
     margin-bottom: 2.7rem;
+    cursor: pointer;
 
     h5{
       padding: 1.7rem 0px;  
