@@ -41,9 +41,7 @@ export const Cocktailpage = () => {
       <Banner
         header="Our  Cocktail"
         text="...sip"
-        styles={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1570598912132-0ba1dc952b7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y29ja3RhaWx8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60)`,
-        }}
+        image="https://media.istockphoto.com/id/1307922399/photo/four-hands-holding-glasses-with-yellow-and-red-fruit-cocktails-in-a-toast.jpg?s=612x612&w=0&k=20&c=OQwJ1jFspFU22KgP7VNO1-roUSBsg2qBQaIJMTQlMXg="
       />
       <Topcocktail />
       <PageTitle pagetitle="Our Cocktail recipes"/>

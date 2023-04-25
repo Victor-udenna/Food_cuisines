@@ -10,6 +10,7 @@ const [modal, setModal] = useState(false);
 
 const handlemodal =()=>{
   setModal(!modal)
+  console.log(!modal)
 }
 
 
@@ -37,15 +38,22 @@ const handlemodal =()=>{
             <li>Enable you save recipe details to your device</li>
             <li>Enable you choose several themes</li>
             <li>
-              <button className="premium_btn">Try Premium</button>
+              <button className="premium_btn" onClick={handlemodal}>Try Premium</button>
             </li>
           </ul>
         </div>
 
 
-        <div className={`modal_container ${modal ? 'active' : 'inactive'}`}>
-
+        <div className={`premium_modal_container ${modal ? 'active' : 'inactive'}`}>
+         <div className="premium_modal">
+           <h4>Premium Currently not available</h4>
+           <p>Premium subscription is currently <span>not availabe</span>.
+            this could be because of network issues or saver down time.
+           </p>
+           <button onClick={handlemodal}>Close</button>
+         </div>
         </div>
+
       </main>
 
       

@@ -44,9 +44,7 @@ export const Chinesepage = () => {
       <Banner
         header="Chinese food"
         text="Nǐ xǐhuān chī shénme? 你喜欢吃什么？"
-        styles={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1525755662778-989d0524087e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2hpbmVzZSUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60)`,
-        }}
+        image="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNoaW5lc2UlMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
       />
       <Topchinese />
       <section className="">

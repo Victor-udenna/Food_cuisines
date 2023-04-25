@@ -121,6 +121,73 @@ $overlay: rgba(0, 0, 0, 0.402);
   background-color: white;
 }
 
+.premium_modal_container.active{
+  @include flex_column()
+}
+
+.premium_modal_container.active{
+  background-color: rgba(0, 0, 0, 0.368);
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  .premium_modal{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: $rounded-edge;
+    width: 300px;
+    border-radius: $rounded-edge;
+  
+    h4{
+      padding-bottom: 20px;
+      padding-top: 15px;
+    }
+
+    p{
+      line-height: 1.6rem;
+      padding: 20px 0px;
+    }
+
+    span{
+      color: $accent_color;
+      font-weight: 600;
+    }
+  }
+
+  button{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    width: 100px;
+    font-weight: bold;
+    border-radius: $rounded-edge;
+    height: auto;
+    padding: 10px;
+    margin: 10px auto  auto auto;
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+  }
+
+  button:hover{
+    background-color: black;
+    color: white;
+  }
+}
+
+.premium_modal_container.inactive{
+display: none;
+
+}
+
+
+
 @media screen and (min-width: 768px) {
 
   .header{

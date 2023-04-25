@@ -127,38 +127,38 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
-.Banner {
-  @include backgrondImg();
+
+.Banner{
+  @include flex_column()
 }
 
-.Banner {
-  @include flex_column();
-}
-
-.Banner {
-  height: 100vh;
-  position: relative;
-}
-
-.banner_header,
-.banner_text {
-  z-index: $z-10;
-  color: white;
+.Banner{
   text-align: center;
-  position: relative;
+  padding: 3rem 1rem;
+
+
+  .banner_header{
+font-size: 2rem;
+padding: 1.2rem 0px;
+  }
+
+  p{
+    color: $accent_color;
+    padding: 10px;
+  }
 }
-.banner_text {
-  font-style: oblique;
-  color: $orange;
+.banner_img_container{
+padding: 20px 0;
 }
 
-.banner_header {
-  font-size: 2.7rem;
+
+.banner_img{
+  width: 300px;
+  height: 300px;
+  border-radius: $circle;
+ border: 2px solid  $accent_color;
 }
 
-.Banner::before {
-  @include overlay();
-}
 
 .primary_btn {
   background-color: $light_bg;
@@ -423,13 +423,17 @@ input {
 
 
 @media screen and (min-width: 768px) {
-  .banner_header {
-    font-size: 3.5rem;
-  }
 
-  .banner_text {
-    font-size: 20px;
+.Banner{
+  .banner_header{
+    font-size: 3rem;
   }
+}
+
+.banner_img{
+  width: 400px;
+  height: 400px;
+}
 
   .Topfood_header {
     margin-bottom: 2.3rem;
@@ -538,6 +542,10 @@ input {
 }
 
 @media screen and (min-width: 900px) {
+  .Banner{
+    padding: 5rem 3rem;
+  }
+
   .mobile_nav,
   .mobile_link_container,
   .mobile_link_container.active {
@@ -567,12 +575,23 @@ input {
 }
 
 @media screen and (min-width: 1024px) {
-  .banner_header {
-    font-size: 5rem;
+
+  .Banner{
+    @include flex_row()
   }
-  .banner_text {
-    font-size: 25px;
+
+.Banner{
+  text-align: start;
+  .banner_header{
+    font-size: 3.7rem;
   }
+}
+
+  .banner_img{
+    width: 450px;
+    height: 450px;
+  }
+
   .Topfood_header {
     margin-top: 2rem;
     margin-bottom: 3rem;

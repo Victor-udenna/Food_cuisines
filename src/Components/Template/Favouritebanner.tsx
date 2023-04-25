@@ -5,13 +5,14 @@ export const Favouritebanner = () => {
   return (
     <Fragment>
       <header className="favourite_header">
-        <div>
-          <img src={loveimg} className="like_img" />
+      
+      <div className="favourite_header_text">
+          <h1>Your <span>Favorite Foods</span></h1>
+          <p>Your favourite foods are saved <span>just for you</span></p>
         </div>
 
-        <div className="favourite_text">
-          <h1>Your Liked Foods</h1>
-          <p>Your favourite foods are saved just for you</p>
+        <div className="like_img_container">
+          <img src={loveimg} className="like_img" />
         </div>
       </header>
     </Fragment>

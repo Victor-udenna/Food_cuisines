@@ -78,7 +78,6 @@ export const Favouritepage = () => {
       <Navbar />
       <Favouritebanner />
 
-
   <div className="test">
   <PageTitle pagetitle="Your Favourite Food"/>
 <button className="delete_all_btn">
