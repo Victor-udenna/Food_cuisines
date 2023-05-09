@@ -1,12 +1,22 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import logo from "../../assets/images/logo (1).png";
 import hambergerbtn from "../../assets/images/hamburger_menu.svg";
 import { Navlist } from "../Molecule/Navlist";
 import cancel from "../../assets/images/x.svg";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export const MobileNav = () => {
   const [dropdown, setdropdown] = useState(false);
+  const [likedno, setlikedNo] = useState(0);
+  const [resarray, setresarray] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:3000/liked_foods").then((response) => {
+      setlikedNo(response.data.length);
+      setresarray(response.data);
+    });
+  }, [resarray]);
 
   const handleDropdown = () => {
     setdropdown(!dropdown);
@@ -26,6 +36,7 @@ export const MobileNav = () => {
           ) : (
             <img src={cancel} onClick={handleDropdown} />
           )}
+          <button className="like_count">{likedno}</button>
         </div>
       </nav>
       <section

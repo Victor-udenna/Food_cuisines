@@ -6,7 +6,7 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import axios from "axios";
 import { Page, Document, Text, PDFDownloadLink } from "@react-pdf/renderer";
 import { Link } from "react-router-dom";
-import {TbCloudDownload} from 'react-icons/tb';
+import { TbCloudDownload } from "react-icons/tb";
 
 export const FoodCard = (props: dataType) => {
   const [modal, setmodal] = useState(false);
@@ -27,21 +27,20 @@ export const FoodCard = (props: dataType) => {
       });
     } else {
       axios.delete(`http://localhost:3000/liked_foods/${props.id}`);
-      console.log("delete", props.id)
+      console.log("delete", props.id);
     }
   };
 
-  useEffect(()=>{
-      axios.get("http://localhost:3000/liked_foods")
-      .then((res)=>{
-        res.data.map((item: dataType)=>{
-          console.log(item.title)
-          if (item.title === props.title){
-            setLiked(false)
-          }
-        })
-      })
-  }, [liked])
+  useEffect(() => {
+    axios.get("http://localhost:3000/liked_foods").then((res) => {
+      res.data.map((item: dataType) => {
+        console.log(item.title);
+        if (item.title === props.title) {
+          setLiked(false);
+        }
+      });
+    });
+  }, [liked]);
 
   return (
     <Fragment>
@@ -53,9 +52,7 @@ export const FoodCard = (props: dataType) => {
           <h3 className="title recipe_header pointer" onClick={displaymodal}>
             {props.title}
           </h3>
-          <p className="difficulty">
-            {props.difficulty}
-          </p>
+          <p className="difficulty">{props.difficulty}</p>
           <span className="card_badge">Free</span>
           <span className="like_btn" onClick={handlelike}>
             {liked ? (
@@ -68,7 +65,6 @@ export const FoodCard = (props: dataType) => {
             <TbCloudDownload color="green" size={27} />
           </span>
         </div>
-
         <div className="modal_container">
           <div className="modal">
             <span className="modal_bar pointer" onClick={displaymodal}>
@@ -90,7 +86,6 @@ export const FoodCard = (props: dataType) => {
               Downloaded documant will only contain food name and difficulty
               level
             </p>
-
             <PDFDownloadLink
               fileName="Recipe Document"
               document={

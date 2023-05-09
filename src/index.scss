@@ -1,6 +1,6 @@
 // VARIABLES
 $accent_color: green;
-$dark_text:rgb(0, 31, 0);
+$dark_text: rgb(0, 31, 0);
 $red: red;
 $nav_background: rgba(0, 0, 0, 0.817);
 $z-10: 10;
@@ -70,7 +70,7 @@ $grey: rgb(232, 232, 232);
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .nav_list {
@@ -127,38 +127,34 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
-
-.Banner{
-  @include flex_column()
+.Banner {
+  @include flex_column();
 }
 
-.Banner{
+.Banner {
   text-align: center;
   padding: 3rem 1rem;
 
-
-  .banner_header{
-font-size: 2rem;
-padding: 1.2rem 0px;
+  .banner_header {
+    font-size: 2rem;
+    padding: 1.2rem 0px;
   }
 
-  p{
+  p {
     color: $accent_color;
     padding: 10px;
   }
 }
-.banner_img_container{
-padding: 20px 0;
+.banner_img_container {
+  padding: 20px 0;
 }
 
-
-.banner_img{
+.banner_img {
   width: 300px;
   height: 300px;
   border-radius: $circle;
- border: 2px solid  $accent_color;
+  border: 2px solid $accent_color;
 }
-
 
 .primary_btn {
   background-color: $light_bg;
@@ -257,7 +253,6 @@ padding: 20px 0;
   @include flex_wrap_between();
 }
 
-
 .mexican_page {
   position: relative;
 }
@@ -297,7 +292,7 @@ padding: 20px 0;
   width: 100%;
   border-radius: $rounded-edge;
   height: 160px;
-  border: 2px solid $grey;
+  border: 3px solid $grey;
   max-width: 350px;
   margin-bottom: 2.4rem;
 
@@ -309,21 +304,20 @@ padding: 20px 0;
     border-radius: $rounded-edge 0 0 $rounded-edge;
     margin-right: 10px;
   }
-  .title{
+  .title {
     padding: 6px 0;
     font-weight: bold;
     font-size: 15px;
   }
 
-
   .download:hover {
     color: $orange;
   }
 
-  .difficulty{
-     position: absolute;
-     bottom: 18px;
-     right: 100px;
+  .difficulty {
+    position: absolute;
+    bottom: 18px;
+    right: 100px;
   }
 }
 
@@ -342,20 +336,15 @@ padding: 20px 0;
   right: 50px;
 }
 
-
-
 .logo_text {
   color: $accent_color;
   font-style: oblique;
   padding-left: 10px;
 }
 
-
-.mail{
+.mail {
   background-color: $red;
 }
-
-
 
 .download_container {
   width: 320px;
@@ -380,7 +369,6 @@ input {
   padding: 5px;
   border: none;
 }
-
 
 .card_lazy_loading {
   @include flex();
@@ -421,19 +409,88 @@ input {
   }
 }
 
+.sort_data {
+  padding: 2rem;
+}
+.search_container {
+  @include flex_row();
+}
+.search_container {
+  width: 100%;
+  max-width: 420px;
+  margin: 1rem 0px;
+  input {
+    padding: 10px;
+    border: 2px solid grey;
+    width: 100%;
+    // background-color: $accent_color;
+    width: 100px;
+  }
+}
+.clear_btn {
+  width: 50px;
+  margin-left: -60px;
+  background-color: transparent;
+  border: 0px;
+  font-weight: bold;
+}
+.clear_btn {
+  @include flex_column();
+}
 
-@media screen and (min-width: 768px) {
+.clear_btn.inactive {
+  color: grey;
+}
 
-.Banner{
-  .banner_header{
-    font-size: 3rem;
+.clear_btn.active {
+  cursor: pointer;
+}
+
+.filter_container {
+  @include flex_row();
+}
+
+.filter_container {
+  width: 100%;
+  max-width: 420px;
+  margin: 1.5rem 0px;
+}
+
+.filter_sub_container {
+  @include flex();
+}
+
+.filter_container {
+  .filter_icon {
+    margin-right: -30px;
+    position: relative;
+    top: 5px;
+    padding-left: 5px;
+  }
+  .select {
+    color: $accent_color;
+    border: 2px solid $accent_color;
+    padding: 10px 10px 10px 50px;
+    border-radius: 10px;
+    font-weight: bold;
+    z-index: 0;
+    option {
+      line-height: 3rem;
+    }
   }
 }
 
-.banner_img{
-  width: 400px;
-  height: 400px;
-}
+@media screen and (min-width: 768px) {
+  .Banner {
+    .banner_header {
+      font-size: 3rem;
+    }
+  }
+
+  .banner_img {
+    width: 400px;
+    height: 400px;
+  }
 
   .Topfood_header {
     margin-bottom: 2.3rem;
@@ -460,8 +517,7 @@ input {
 
   .card {
     border-radius: $rounded-edge;
-    height: 350px;
-    border: 1px solid $grey;
+    height: 290px;
     padding: 0 10px;
     max-width: 210px;
     margin-bottom: 2.4rem;
@@ -469,12 +525,12 @@ input {
     margin-left: 10px;
 
     .title {
-      font-size: 17px;
+      font-size: 15px;
     }
 
     .recipe_img {
-      width: 120px;
-      height: 120px;
+      width: 110px;
+      height: 110px;
       margin-top: 2px;
       align-items: center;
       border-radius: $circle;
@@ -518,31 +574,38 @@ input {
       width: 180px;
       height: 30px;
     }
-
     .difficulty {
       width: 50px;
       height: 30px;
     }
   }
-
-
-  .footer_app{
-    .h3{
+  .footer_app {
+    .h3 {
       padding: 1rem 0;
     }
   }
-
-
-
-
-
-  .copy_container{
+  .copy_container {
     text-align: center;
+  }
+  .sort_data {
+    @include flex_row();
+  }
+  .sort_data {
+    padding: 2.4rem;
+  }
+  .filter_container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 0px;
+    p {
+      padding-right: 1.3rem;
+    }
   }
 }
 
 @media screen and (min-width: 900px) {
-  .Banner{
+  .Banner {
     padding: 5rem 3rem;
   }
 
@@ -575,19 +638,18 @@ input {
 }
 
 @media screen and (min-width: 1024px) {
-
-  .Banner{
-    @include flex_row()
+  .Banner {
+    @include flex_row();
   }
 
-.Banner{
-  text-align: start;
-  .banner_header{
-    font-size: 3.7rem;
+  .Banner {
+    text-align: start;
+    .banner_header {
+      font-size: 3.7rem;
+    }
   }
-}
 
-  .banner_img{
+  .banner_img {
     width: 450px;
     height: 450px;
   }
@@ -612,6 +674,10 @@ input {
   .food_header {
     padding: 3.4rem;
     font-size: 2.3rem;
+  }
+
+  .sort_data {
+    padding: 3.4rem;
   }
 }
 
@@ -666,15 +732,19 @@ input {
   }
 }
 
-.error_component{
-  @include flex_column()
+.error_component {
+  @include flex_column();
 }
 
-.error_component{
+.error_component {
   padding: 4rem 10px;
 
-  img{
+  img {
     width: 100%;
     max-width: 500px;
   }
+}
+
+.cancel_container {
+  @include flex_column();
 }

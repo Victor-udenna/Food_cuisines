@@ -1,15 +1,17 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState, useCallback } from "react";
 import { AiTwotoneHeart } from "react-icons/ai";
 import axios from "axios";
 
 export const Primarybutton = () => {
   const [likedno, setlikedNo] = useState(0);
+  const [resarray, setresarray] = useState([]);
 
-setInterval(()=>{
-  axios.get("http://localhost:3000/liked_foods").then((response) => {
-    setlikedNo(response.data.length);
-  });
-}, 1000)
+  useEffect(() => {
+    axios.get("http://localhost:3000/liked_foods").then((response) => {
+      setlikedNo(response.data.length);
+      setresarray(response.data);
+    });
+  }, [resarray]);
 
   return (
     <Fragment>

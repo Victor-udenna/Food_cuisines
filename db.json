@@ -1,3 +1,28 @@
 {
-  "liked_foods": []
+  "liked_foods": [
+    {
+      "title": "Dark chocolate bark with sea salt, rosemary, pistachios and candied citrus",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/vegan_api/1.jpg",
+      "id": 1
+    },
+    {
+      "title": "Pressure cooker refried beans",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/vegan_api/2.jpg",
+      "id": 2
+    },
+    {
+      "title": "Beetroot, spinach and coconut curry",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/vegan_api/3.jpg",
+      "id": 3
+    },
+    {
+      "title": "Traditional pretzels",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/vegan_api/4.jpg",
+      "id": 4
+    }
+  ]
 }

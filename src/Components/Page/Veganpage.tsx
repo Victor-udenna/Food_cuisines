@@ -4,15 +4,22 @@ import { Banner } from "../Template/Banner";
 import { Footer } from "../Template/Footer";
 import { Topvegan } from "../Template/Topvegan";
 import { FoodCard } from "../Template/FoodCard";
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { dataType } from "../../types/datatypes";
 import { Card_lazyloading } from "../Template/Card_lazyloading";
 import { PageTitle } from "../Atom/PageTitle";
 import { Errormessage } from "../Organism/Errormessage";
+import { BsFilterLeft } from "react-icons/bs";
+import { RxCross2 } from "react-icons/rx";
+import { FiSearch } from "react-icons/fi";
 
 export const Veganpage = () => {
-
   const [foodData, setFoodData] = useState([]);
+  const [filteredlist, setFilteredlist] = useState([]);
+  const [cancelQuery, setCancelquery] = useState<boolean>(false);
+  const [filterQuery, setFilterQuery] = useState<string>();
+  const [searchterm, setSearchterm] = useState<string>("");
   const options = {
     method: "GET",
     url: "https://the-vegan-recipes-db.p.rapidapi.com/",
@@ -27,14 +34,45 @@ export const Veganpage = () => {
       .request(options)
       .then(function (response) {
         setFoodData(response.data);
+        setFilteredlist(response.data);
       })
       .catch(function (error) {
         console.error(error);
       });
+    return foodData;
   };
 
-  const { status, data } = useQuery("food", getVeganfood);
+  const { data, isLoading, isError, isSuccess } = useQuery(
+    ["veganfood"],
+    getVeganfood
+  );
 
+  const filterData = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const filter = e.target.value;
+    let newlist = [...foodData];
+    newlist = newlist.filter((item: dataType) => {
+      return (
+        item.difficulty.toLocaleLowerCase().indexOf(filter.toLowerCase()) !== -1
+      );
+    });
+    setFilteredlist(newlist);
+  };
+
+  const filterbySearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let query = e.target.value;
+    setSearchterm(e.target.value);
+    if (query.length >= 1) {
+      setCancelquery(() => true);
+    } else if (query.length === 0) {
+      setCancelquery(false);
+    }
+  };
+
+  const clear_Input = (e: React.FormEvent) => {
+    e.preventDefault();
+    document.forms[0].reset();
+    setCancelquery(false);
+  };
 
   return (
     <Fragment>
@@ -46,31 +84,83 @@ export const Veganpage = () => {
       />
       <Topvegan />
       <section>
-        <PageTitle pagetitle="Our Vegetarian Recipes"/>
-
+        <PageTitle pagetitle="Our Vegetarian Recipes" />
 
         <div>
-         <div className="card_container">
-
-          {status === "success" &&
-            foodData?.map((item: any, i: number) => {
-              if (i < 15) {
-                return (
-                  <FoodCard
-                    key={item.id}
-                    id={item.id}
-                    title={item.title}
-                    difficulty={item.difficulty}
-                    image={item.image}
-                  />
-                );
-              }
-            })}
-
-          {status === "loading" && <Card_lazyloading />}
+          <section className="sort_data">
+            <form className="search_container" onSubmit={clear_Input}>
+              <input
+                id="search"
+                type="text"
+                placeholder="search"
+                onChange={filterbySearch}
+              />
+              <button
+                className={`clear_btn ${cancelQuery ? "active" : "inactive"}`}
+              >
+                {cancelQuery ? <RxCross2 size={20} /> : <FiSearch size={20} />}
+              </button>
+            </form>
+            <div className="filter_container">
+              <p>
+                <b>Difficulty :</b>
+              </p>
+              <div className="filter__sub_container">
+                <span className="filter_icon">
+                  <BsFilterLeft color="green" size="20" />
+                </span>
+                <select
+                  className="select"
+                  name="filterQuery"
+                  onChange={filterData}
+                  value={filterQuery}
+                >
+                  <option value="">Sort by : All</option>
+                  <option value="Easy"> Easy </option>
+                  <option className="medium" value="medium">
+                    {" "}
+                    Medium{" "}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </section>
+          <div>
+            {isLoading ? (
+              <Card_lazyloading />
+            ) : isError ? (
+              <Errormessage />
+            ) : (
+              <div className="card_container">
+                {filteredlist
+                  .filter((item: dataType) => {
+                    if (searchterm === "") {
+                      return item;
+                    } else if (
+                      item.title
+                        .toLowerCase()
+                        .includes(searchterm.toLowerCase())
+                    ) {
+                      return item;
+                    }
+                  })
+                  .map((item: dataType, i: number) => {
+                    if (i < 15) {
+                      return (
+                        <FoodCard
+                          key={item.id}
+                          id={item.id}
+                          title={item.title}
+                          difficulty={item.difficulty}
+                          image={item.image}
+                        />
+                      );
+                    }
+                  })}
+              </div>
+            )}
           </div>
-          {status === "error" && <Errormessage/>}
-        </div> 
+        </div>
       </section>
       <Footer />
     </Fragment>
