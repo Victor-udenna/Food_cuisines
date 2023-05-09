@@ -14,20 +14,17 @@ import { BsFilterLeft } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
 import { FiSearch } from "react-icons/fi";
 
-
 export const Mexicanfood = () => {
   const [foodData, setFoodData] = useState([]);
   const [filteredlist, setFilteredlist] = useState([]);
   const [cancelQuery, setCancelquery] = useState<boolean>(false);
   const [filterQuery, setFilterQuery] = useState<string>();
   const [searchterm, setSearchterm] = useState<string>("");
-
-
   const options = {
     method: "GET",
     url: "https://the-mexican-food-db.p.rapidapi.com/",
     headers: {
-      "X-RapidAPI-Key": import.meta.env.VITE_SOME_KEY ,
+      "X-RapidAPI-Key": "5312ed048amsh03ba71e9c5ebb31p10336djsnc538ae0495e9",
       "X-RapidAPI-Host": "the-mexican-food-db.p.rapidapi.com",
       // 2eb9578c9emsh80336b04e9b9b41p1b565ajsnec3d31f4b6b2
     },
