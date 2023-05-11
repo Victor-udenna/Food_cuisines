@@ -1,18 +1,6 @@
 {
   "liked_foods": [
     {
-      "title": "Dark chocolate bark with sea salt, rosemary, pistachios and candied citrus",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/vegan_api/1.jpg",
-      "id": 1
-    },
-    {
-      "title": "Pressure cooker refried beans",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/vegan_api/2.jpg",
-      "id": 2
-    },
-    {
       "title": "Beetroot, spinach and coconut curry",
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/vegan_api/3.jpg",
@@ -35,6 +23,42 @@
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/mexican_api/3.jpg",
       "id": 6
+    },
+    {
+      "title": "Black bean and chicken burritos",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/4.jpg",
+      "id": 7
+    },
+    {
+      "title": "Pork tacos with sweetcorn and feta",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/5.jpg",
+      "id": 8
+    },
+    {
+      "title": "Taco slaw with pink pickled onions",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/6.jpg",
+      "id": 9
+    },
+    {
+      "title": "Venison tacos with grilled spring onions and peanut salsa",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/10.jpg",
+      "id": 10
+    },
+    {
+      "title": "Mexican-style barbecued beef brisket with quick-pickled onions",
+      "difficulty": "Medium",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/13.jpg",
+      "id": 11
+    },
+    {
+      "title": "Frozen mango margarita",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/14.jpg",
+      "id": 12
     }
   ]
 }

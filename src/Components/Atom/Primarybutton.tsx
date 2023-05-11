@@ -1,17 +1,33 @@
-import React, { Fragment, useEffect, useState, useCallback } from "react";
+import React, { Fragment, useEffect, useState} from "react";
 import { AiTwotoneHeart } from "react-icons/ai";
 import axios from "axios";
+import {useSelector, useDispatch} from  'react-redux';
+import {incrementLike} from "../../Redux/count";
 
-export const Primarybutton = () => {
-  const [likedno, setlikedNo] = useState(0);
+
+
+
+ export const Primarybutton = () => {
+  const [likedno, setlikedNo] = useState<number>();
   const [resarray, setresarray] = useState([]);
+
+  const {count}  = useSelector((state: any ) => state.count);
+  const dispatch = useDispatch();
+
+  const changeLikenumber = ()=>{
+    dispatch(incrementLike(likedno))
+        }
 
   useEffect(() => {
     axios.get("http://localhost:3000/liked_foods").then((response) => {
       setlikedNo(response.data.length);
       setresarray(response.data);
     });
+changeLikenumber()
+    
   }, [resarray]);
+
+
 
   return (
     <Fragment>
@@ -21,7 +37,9 @@ export const Primarybutton = () => {
           <AiTwotoneHeart />
         </span>
       </button>
-      <button className="like_count">{likedno}</button>
+      <button className="like_count">{count}</button>
     </Fragment>
   );
 };
+
+
