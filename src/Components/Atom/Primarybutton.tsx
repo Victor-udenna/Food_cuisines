@@ -11,7 +11,7 @@ import {incrementLike} from "../../Redux/count";
   const [likedno, setlikedNo] = useState<number>();
   const [resarray, setresarray] = useState([]);
 
-  const {count}  = useSelector((state: any ) => state.count);
+  const {likecount}  = useSelector((state: any ) => state.likecount);
   const dispatch = useDispatch();
 
   const changeLikenumber = ()=>{
@@ -37,7 +37,7 @@ changeLikenumber()
           <AiTwotoneHeart />
         </span>
       </button>
-      <button className="like_count">{count}</button>
+      <button className="like_count">{likecount}</button>
     </Fragment>
   );
 };

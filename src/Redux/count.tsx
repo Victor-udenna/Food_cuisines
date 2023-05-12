@@ -6,11 +6,11 @@ interface myCount {
 export const counterSlice = createSlice({
     name: 'counter',
     initialState: {
-        count: 0
+        likecount: 0
     },
     reducers: {
         incrementLike: (state, action) => {
-            state.count = action.payload
+            state.likecount = action.payload
         }
     }
     

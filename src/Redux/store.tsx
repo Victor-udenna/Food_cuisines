@@ -3,6 +3,6 @@ import counterReducer from "./count";
 
 export default configureStore({
     reducer: {
-        count: counterReducer
+        likecount: counterReducer
     }
 })
