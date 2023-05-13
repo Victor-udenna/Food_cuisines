@@ -4,7 +4,7 @@ interface myCount {
 }
 
 export const counterSlice = createSlice({
-    name: 'counter',
+    name: 'likecount',
     initialState: {
         likecount: 0
     },

@@ -1,46 +1,40 @@
 {
   "liked_foods": [
     {
-      "title": "Beetroot, spinach and coconut curry",
+      "title": "Pressure cooker refried beans",
       "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/vegan_api/3.jpg",
-      "id": 3
-    },
-    {
-      "title": "Traditional pretzels",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/vegan_api/4.jpg",
-      "id": 4
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/1.jpg",
+      "id": 1
     },
     {
       "title": "Black bean chilli soup with corn dumplings",
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/mexican_api/2.jpg",
-      "id": 5
+      "id": 2
     },
     {
       "title": "Fishcake tacos",
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/mexican_api/3.jpg",
-      "id": 6
+      "id": 3
     },
     {
-      "title": "Pork tacos with sweetcorn and feta",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/mexican_api/5.jpg",
-      "id": 8
+      "title": "Chilaquiles with fresh tomatillo salsa",
+      "difficulty": "Medium",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/8.jpg",
+      "id": 4
     },
     {
-      "title": "Taco slaw with pink pickled onions",
+      "title": "Chipotle baked eggs",
       "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/mexican_api/6.jpg",
-      "id": 9
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/9.jpg",
+      "id": 5
     },
     {
       "title": "Venison tacos with grilled spring onions and peanut salsa",
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/mexican_api/10.jpg",
-      "id": 10
+      "id": 6
     }
   ]
 }
