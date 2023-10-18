@@ -20,6 +20,7 @@ export const Mexicanfood = () => {
   const [cancelQuery, setCancelquery] = useState<boolean>(false);
   const [filterQuery, setFilterQuery] = useState<string>();
   const [searchterm, setSearchterm] = useState<string>("");
+  
   const options = {
     method: "GET",
     url: "https://the-mexican-food-db.p.rapidapi.com/",

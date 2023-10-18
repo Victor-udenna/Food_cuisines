@@ -1,12 +1,6 @@
 {
   "liked_foods": [
     {
-      "title": "Pressure cooker refried beans",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/mexican_api/1.jpg",
-      "id": 1
-    },
-    {
       "title": "Black bean chilli soup with corn dumplings",
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/mexican_api/2.jpg",
@@ -31,10 +25,10 @@
       "id": 5
     },
     {
-      "title": "Venison tacos with grilled spring onions and peanut salsa",
+      "title": "Easy rhubarb cordial",
       "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/mexican_api/10.jpg",
-      "id": 6
+      "image": "https://apipics.s3.amazonaws.com/coctails_api/2.jpg",
+      "id": 7
     }
   ]
 }
