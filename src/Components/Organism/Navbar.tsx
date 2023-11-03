@@ -1,6 +1,6 @@
 import React from "react";
-import { DesktopNav } from "../Organism/Desktopnav";
-import { MobileNav } from "../Organism/Mobilenav";
+import { DesktopNav } from "../Molecule/Desktopnav";
+import { MobileNav } from "../Molecule/Mobilenav";
 
 export const Navbar = () => {
   return (

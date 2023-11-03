@@ -1,20 +1,20 @@
 import React, { Fragment, useState } from "react";
-import { Navbar } from "../Template/Navbar";
-import { Banner } from "../Template/Banner";
-import { Footer } from "../Template/Footer";
 import axios from "axios";
-import { Topcocktail } from "../Template/Topcocktail";
-import { FoodCard } from "../Template/FoodCard";
-import { Card_lazyloading } from "../Template/Card_lazyloading";
+import { Navbar } from "../Organism/Navbar";
+import { Banner } from "../Organism/Banner";
+import { Footer } from "../Organism/Footer";
+import { Topchinese } from "../Organism/Topchinese";
+import { FoodCard } from "../Organism/FoodCard";
 import { useQuery } from "@tanstack/react-query";
 import { PageTitle } from "../Atom/PageTitle";
-import { Errormessage } from "../Organism/Errormessage";
+import { Card_lazyloading } from "../Organism/Card_lazyloading";
+import { Errormessage } from "../Molecule/Errormessage";
 import { dataType } from "../../types/datatypes";
-import { FiSearch } from "react-icons/fi";
-import { RxCross2 } from "react-icons/rx";
 import { BsFilterLeft } from "react-icons/bs";
+import { RxCross2 } from "react-icons/rx";
+import { FiSearch } from "react-icons/fi";
 
-export const Cocktailpage = () => {
+export const Chinesepage = () => {
   const [foodData, setFoodData] = useState([]);
   const [filteredlist, setFilteredlist] = useState([]);
   const [cancelQuery, setCancelquery] = useState<boolean>(false);
@@ -23,14 +23,15 @@ export const Cocktailpage = () => {
 
   const options = {
     method: "GET",
-    url: "https://the-cocktail-db3.p.rapidapi.com/",
+    url: "https://chinese-food-db.p.rapidapi.com/",
     headers: {
-      // "X-RapidAPI-Key":   "2eb9578c9emsh80336b04e9b9b41p1b565ajsnec3d31f4b6b2",
-      "X-RapidAPI-Host": "the-cocktail-db3.p.rapidapi.com",
+      // "X-RapidAPI-Key": "5312ed048amsh03ba71e9c5ebb31p10336djsnc538ae0495e9",
+      'X-RapidAPI-Host': 'chinese-food-db.p.rapidapi.com',
+      // 2eb9578c9emsh80336b04e9b9b41p1b565ajsnec3d31f4b6b2
     },
   };
 
-  const getCocktail = () => {
+  const getChinese = () => {
     axios
       .request(options)
       .then(function (response) {
@@ -42,18 +43,20 @@ export const Cocktailpage = () => {
       });
     return foodData;
   };
+
   const { data, isLoading, isError, isSuccess } = useQuery(
-    ["cocktail"],
-    getCocktail
+    ["mexicanfood"],
+    getChinese
   );
 
   const filterData = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const filter = e.target.value;
     let newlist = [...foodData];
     newlist = newlist.filter((item: dataType) => {
-      return item.difficulty.toLowerCase().indexOf(filter.toLowerCase()) !== -1;
+      return (
+        item.difficulty.toLocaleLowerCase().indexOf(filter.toLowerCase()) !== -1
+      );
     });
-    console.log(newlist);
     setFilteredlist(newlist);
   };
 
@@ -70,7 +73,6 @@ export const Cocktailpage = () => {
   const clear_Input = (e: React.FormEvent) => {
     e.preventDefault();
     document.forms[0].reset();
-    // setFilteredlist(food);
     setCancelquery(false);
   };
 
@@ -78,13 +80,13 @@ export const Cocktailpage = () => {
     <Fragment>
       <Navbar />
       <Banner
-        header="Our  Cocktail"
-        text="...sip"
-        image="https://media.istockphoto.com/id/1307922399/photo/four-hands-holding-glasses-with-yellow-and-red-fruit-cocktails-in-a-toast.jpg?s=612x612&w=0&k=20&c=OQwJ1jFspFU22KgP7VNO1-roUSBsg2qBQaIJMTQlMXg="
+        header="Chinese food"
+        text="Nǐ xǐhuān chī shénme? 你喜欢吃什么？"
+        image="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNoaW5lc2UlMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
       />
-      <Topcocktail />
-      <PageTitle pagetitle="Our Cocktail recipes" />
-      <section>
+      <Topchinese />
+      <section className="">
+        <PageTitle pagetitle="Our Chinese recipes" />
         <div>
           <section className="sort_data">
             <form className="search_container" onSubmit={clear_Input}>
@@ -161,7 +163,6 @@ export const Cocktailpage = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </Fragment>
   );

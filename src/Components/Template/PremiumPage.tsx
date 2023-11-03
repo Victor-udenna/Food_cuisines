@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
-import { Navbar } from "../Template/Navbar";
-import { Footer } from "../Template/Footer";
+import { Navbar } from "../Organism/Navbar";
+import { Footer } from "../Organism/Footer";
 
 import "../../styles/premium.scss";
 

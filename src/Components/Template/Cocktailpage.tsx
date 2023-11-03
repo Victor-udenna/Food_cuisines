@@ -1,35 +1,36 @@
 import React, { Fragment, useState } from "react";
-import { Navbar } from "../Template/Navbar";
-import { Banner } from "../Template/Banner";
-import { Footer } from "../Template/Footer";
-import { Topvegan } from "../Template/Topvegan";
-import { FoodCard } from "../Template/FoodCard";
-import { useQuery } from "@tanstack/react-query";
+import { Navbar } from "../Organism/Navbar";
+import { Banner } from "../Organism/Banner";
+import { Footer } from "../Organism/Footer";
 import axios from "axios";
-import { dataType } from "../../types/datatypes";
-import { Card_lazyloading } from "../Template/Card_lazyloading";
+import { Topcocktail } from "../Organism/Topcocktail";
+import { FoodCard } from "../Organism/FoodCard";
+import { Card_lazyloading } from "../Organism/Card_lazyloading";
+import { useQuery } from "@tanstack/react-query";
 import { PageTitle } from "../Atom/PageTitle";
-import { Errormessage } from "../Organism/Errormessage";
-import { BsFilterLeft } from "react-icons/bs";
-import { RxCross2 } from "react-icons/rx";
+import { Errormessage } from "../Molecule/Errormessage";
+import { dataType } from "../../types/datatypes";
 import { FiSearch } from "react-icons/fi";
+import { RxCross2 } from "react-icons/rx";
+import { BsFilterLeft } from "react-icons/bs";
 
-export const Veganpage = () => {
+export const Cocktailpage = () => {
   const [foodData, setFoodData] = useState([]);
   const [filteredlist, setFilteredlist] = useState([]);
   const [cancelQuery, setCancelquery] = useState<boolean>(false);
   const [filterQuery, setFilterQuery] = useState<string>();
   const [searchterm, setSearchterm] = useState<string>("");
+
   const options = {
     method: "GET",
-    url: "https://the-vegan-recipes-db.p.rapidapi.com/",
+    url: "https://the-cocktail-db3.p.rapidapi.com/",
     headers: {
-      // "X-RapidAPI-Key": "2eb9578c9emsh80336b04e9b9b41p1b565ajsnec3d31f4b6b2",
-      "X-RapidAPI-Host": "the-vegan-recipes-db.p.rapidapi.com",
+      // "X-RapidAPI-Key":   "2eb9578c9emsh80336b04e9b9b41p1b565ajsnec3d31f4b6b2",
+      "X-RapidAPI-Host": "the-cocktail-db3.p.rapidapi.com",
     },
   };
 
-  const getVeganfood = () => {
+  const getCocktail = () => {
     axios
       .request(options)
       .then(function (response) {
@@ -41,20 +42,18 @@ export const Veganpage = () => {
       });
     return foodData;
   };
-
   const { data, isLoading, isError, isSuccess } = useQuery(
-    ["veganfood"],
-    getVeganfood
+    ["cocktail"],
+    getCocktail
   );
 
   const filterData = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const filter = e.target.value;
     let newlist = [...foodData];
     newlist = newlist.filter((item: dataType) => {
-      return (
-        item.difficulty.toLocaleLowerCase().indexOf(filter.toLowerCase()) !== -1
-      );
+      return item.difficulty.toLowerCase().indexOf(filter.toLowerCase()) !== -1;
     });
+    console.log(newlist);
     setFilteredlist(newlist);
   };
 
@@ -71,6 +70,7 @@ export const Veganpage = () => {
   const clear_Input = (e: React.FormEvent) => {
     e.preventDefault();
     document.forms[0].reset();
+    // setFilteredlist(food);
     setCancelquery(false);
   };
 
@@ -78,14 +78,13 @@ export const Veganpage = () => {
     <Fragment>
       <Navbar />
       <Banner
-        header="Our Vegan recipes"
-        text="learn how to prepare your favourite"
-        image="https://images.unsplash.com/photo-1615366105533-5b8f3255ea5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dmVnZXRhcmlhbiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+        header="Our  Cocktail"
+        text="...sip"
+        image="https://media.istockphoto.com/id/1307922399/photo/four-hands-holding-glasses-with-yellow-and-red-fruit-cocktails-in-a-toast.jpg?s=612x612&w=0&k=20&c=OQwJ1jFspFU22KgP7VNO1-roUSBsg2qBQaIJMTQlMXg="
       />
-      <Topvegan />
+      <Topcocktail />
+      <PageTitle pagetitle="Our Cocktail recipes" />
       <section>
-        <PageTitle pagetitle="Our Vegetarian Recipes" />
-
         <div>
           <section className="sort_data">
             <form className="search_container" onSubmit={clear_Input}>
@@ -144,7 +143,7 @@ export const Veganpage = () => {
                       return item;
                     }
                   })
-                  .map((item: dataType, i: number) => {
+                  .map((item: any, i: number) => {
                     if (i < 15) {
                       return (
                         <FoodCard
@@ -162,6 +161,7 @@ export const Veganpage = () => {
           </div>
         </div>
       </section>
+
       <Footer />
     </Fragment>
   );

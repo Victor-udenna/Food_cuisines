@@ -1,5 +1,5 @@
 import React from "react";
-import { Navlist } from "../Molecule/Navlist";
+import { Navlist } from "../Atom/Navlist";
 import Logo from "../Atom/Logo";
 import { Link } from "react-router-dom";
 import { Primarybutton } from "../Atom/Primarybutton";

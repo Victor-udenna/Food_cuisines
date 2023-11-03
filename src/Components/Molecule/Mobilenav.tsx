@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Logo from "../Atom/Logo";
 import hambergerbtn from "../../assets/images/hamburger_menu.svg";
-import { Navlist } from "../Molecule/Navlist";
+import { Navlist } from "../Atom/Navlist";
 import cancel from "../../assets/images/x.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";

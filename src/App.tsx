@@ -4,13 +4,13 @@ import "./App.scss";
 
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
-import { Home } from "./Components/Page/Home";
-import { Mexicanfood } from "./Components/Page/Mexicanfood";
-import { Chinesepage } from "./Components/Page/Chinesepage";
-import { Cocktailpage } from "./Components/Page/Cocktailpage";
-import { Veganpage } from "./Components/Page/Veganpage";
-import { Favouritepage } from "./Components/Page/Favouritepage";
-import { PremiumPage } from "./Components/Page/PremiumPage";
+import { Home } from "./Components/Template/Home";
+import { Mexicanfood } from "./Components/Template/Mexicanfood";
+import { Chinesepage } from "./Components/Template/Chinesepage";
+import { Cocktailpage } from "./Components/Template/Cocktailpage";
+import { Veganpage } from "./Components/Template/Veganpage";
+import { Favouritepage } from "./Components/Template/Favouritepage";
+import { PremiumPage } from "./Components/Template/PremiumPage";
 
 function App() {
   return (

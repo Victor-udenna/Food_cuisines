@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import { Navbar } from "../Template/Navbar";
-import { Footer } from "../Template/Footer";
+import { Navbar } from "../Organism/Navbar";
+import { Footer } from "../Organism/Footer";
 import "../../styles/home.scss";
 import headimg from "../../assets/images/cover1.avif";
 import {FaHandHoldingHeart} from "react-icons/fa";
@@ -16,7 +16,7 @@ import cakeimg from "../../assets/images/cake.jpg";
 import italianfoodimg from "../../assets/images/italianfood.jpg";
 import frenchfoodimg from "../../assets/images/frenchfood.webp";
 import { Link } from "react-router-dom";
-import { AppPricing } from "../Template/AppPricing";
+import { AppPricing } from "../Organism/AppPricing";
 
 
 

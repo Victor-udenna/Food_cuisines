@@ -1,16 +1,16 @@
 import { Fragment, useState } from "react";
-import { Footer } from "../Template/Footer";
-import { Navbar } from "../Template/Navbar";
-import { Favouritebanner } from "../Template/Favouritebanner";
+import { Footer } from "../Organism/Footer";
+import { Navbar } from "../Organism/Navbar";
+import { Favouritebanner } from "../Organism/Favouritebanner";
 import { useQuery } from "@tanstack/react-query";
-import { Favouritefoodcard } from "../Template/Favouritefoodcard";
-import { Favouritelazyload } from "../Template/Favouritelazyload";
+import { Favouritefoodcard } from "../Organism/Favouritefoodcard";
+import { Favouritelazyload } from "../Organism/Favouritelazyload";
 import { BsHeartbreakFill } from "react-icons/bs";
 import { HiArrowCircleDown } from "react-icons/hi";
 import axios from "axios";
 import { PageTitle } from "../Atom/PageTitle";
-import { Nodata } from "../Template/Nodata";
-import { Errormessage } from "../Organism/Errormessage";
+import { Nodata } from "../Organism/Nodata";
+import { Errormessage } from "../Molecule/Errormessage";
 
 type deleteData = {
   title: string;

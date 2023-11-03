@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import { Topfoodcard } from "../Molecule/Topfoodcard";
 import Topfooddata from "../../data/Topfood.json";
-import { Topfoodcard } from "../Organism/Topfoodcard";
 
-export const Topcocktail = () => {
-  let topcocktail = Topfooddata.topcocktail;
+export const TopMexican = () => {
+  let topmexicanFood = Topfooddata.topmexican;
+
   return (
     <div className="Topfood_container">
-      <h2 className="Topfood_header">Our Top cocktail drinks </h2>
+      <h2 className="Topfood_header">Our Top Mexican food</h2>
       <div className="Topfood_cardcontainer">
-        {topcocktail.map((item) => {
+        {topmexicanFood.map((item) => {
           return (
             <Topfoodcard
               key={item.id}
