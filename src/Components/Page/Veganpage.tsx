@@ -24,7 +24,7 @@ export const Veganpage = () => {
     method: "GET",
     url: "https://the-vegan-recipes-db.p.rapidapi.com/",
     headers: {
-      "X-RapidAPI-Key": "2eb9578c9emsh80336b04e9b9b41p1b565ajsnec3d31f4b6b2",
+      // "X-RapidAPI-Key": "2eb9578c9emsh80336b04e9b9b41p1b565ajsnec3d31f4b6b2",
       "X-RapidAPI-Host": "the-vegan-recipes-db.p.rapidapi.com",
     },
   };

@@ -1,12 +1,6 @@
 {
   "liked_foods": [
     {
-      "title": "Black bean chilli soup with corn dumplings",
-      "difficulty": "Easy",
-      "image": "https://apipics.s3.amazonaws.com/mexican_api/2.jpg",
-      "id": 2
-    },
-    {
       "title": "Fishcake tacos",
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/mexican_api/3.jpg",
@@ -29,6 +23,24 @@
       "difficulty": "Easy",
       "image": "https://apipics.s3.amazonaws.com/coctails_api/2.jpg",
       "id": 7
+    },
+    {
+      "title": "Steamed lap cheong with five treasure fried rice",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/chinese_recipes_api/3.jpg",
+      "id": 8
+    },
+    {
+      "title": "Jeremy Pang’s General Tso’s chicken",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/chinese_recipes_api/4.jpg",
+      "id": 9
+    },
+    {
+      "title": "Pressure cooker refried beans",
+      "difficulty": "Easy",
+      "image": "https://apipics.s3.amazonaws.com/mexican_api/1.jpg",
+      "id": 10
     }
   ]
 }

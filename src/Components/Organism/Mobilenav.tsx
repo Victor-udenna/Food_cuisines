@@ -1,10 +1,11 @@
 import React, { Fragment, useState, useEffect } from "react";
-import logo from "../../assets/images/logo (1).png";
+import Logo from "../Atom/Logo";
 import hambergerbtn from "../../assets/images/hamburger_menu.svg";
 import { Navlist } from "../Molecule/Navlist";
 import cancel from "../../assets/images/x.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { Primarybutton } from "../Atom/Primarybutton";
 
 export const MobileNav = () => {
   const [dropdown, setdropdown] = useState(false);
@@ -26,8 +27,7 @@ export const MobileNav = () => {
       <nav className="mobile_nav">
         <div className="logo_container">
           <Link to="/">
-            <img src={logo} width="50px" className="app_logo" alt="logo" />
-            <p className="logo_text center">Kuisine</p>
+         <Logo/>
           </Link>
         </div>
         <div>
@@ -43,6 +43,12 @@ export const MobileNav = () => {
         className={`mobile_link_container ${dropdown ? "active" : "inactive"}`}
       >
         <Navlist />
+<div className="nav__btn__container">
+<button className="login__btn">Log in</button>
+        <Link to="/Favouritepage">
+          <Primarybutton />
+        </Link>
+</div>
       </section>
     </Fragment>
   );
