@@ -137,7 +137,7 @@ a:-webkit-any-link {
 
 .Banner {
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 5rem 1rem 3rem 1rem;
 
   .banner_header {
     font-size: 2rem;
@@ -428,7 +428,6 @@ input {
     padding: 10px;
     border: 2px solid grey;
     width: 100%;
-    // background-color: $accent_color;
     width: 100px;
   }
 }
@@ -622,9 +621,10 @@ input {
 display: flex;
 align-items: center;
 justify-content: space-between;
+position: relative;
 }
 
-.login__btn{
+.acc__btn{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -640,11 +640,43 @@ justify-content: space-between;
   cursor: pointer;
 }
 
+.auth_dropdown{
+display: flex;
+flex-direction: column;
+border-radius: 6px;
+gap: 16px;
+background-color: white;  
+padding: 10px;
+position: absolute;
+top: 48px;
+margin-left: -12px;
+width: 130px;
+box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+
+button{
+  background-color: inherit;
+  border: none;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+button:hover{
+background-color: honeydew;
+
+}
+
+.login_btn{
+  color: green;
+}
+}
+
 
 
 @media screen and (min-width: 900px) {
   .Banner {
-    padding: 5rem 3rem;
+    padding: 7rem 3rem 5rem 3rem;
   }
 
   .mobile_nav,

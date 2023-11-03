@@ -4,7 +4,7 @@ import "./App.scss";
 
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
-import { Home } from "./Components/Template/Home";
+import { Home } from "./Components/Page/Home";
 import { Mexicanfood } from "./Components/Template/Mexicanfood";
 import { Chinesepage } from "./Components/Template/Chinesepage";
 import { Cocktailpage } from "./Components/Template/Cocktailpage";

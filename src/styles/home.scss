@@ -84,7 +84,7 @@ $grey: rgb(232, 232, 232);
 .home_header{
     width: 100%;
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 6rem 1rem 4rem 1rem;
 
     span{
         color: $accent_color;
@@ -257,7 +257,10 @@ cursor: pointer;
 
 
 @media screen and (min-width: 768px){
- .home_header, .category_container{
+ .home_header{
+ padding: 7rem 1rem 5rem 1rem;
+
+ }.category_container{
     padding: 5rem 1rem;
  }
 
@@ -275,7 +278,9 @@ cursor: pointer;
 
 
 @media screen and (min-width: 900px){
-.home_header, .category_container{
+.home_header{
+    padding: 7rem 3rem 5rem 3rem;
+} .category_container{
     padding: 5rem 3rem;
 }
 

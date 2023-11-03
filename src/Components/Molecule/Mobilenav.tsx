@@ -48,7 +48,7 @@ export const MobileNav = () => {
       >
         <Navlist />
 <div className="mobile_nav__btn__container">
-<button className="login__btn"><FaUser/> Account <BiChevronDown/></button>
+<button className="acc__btn"><FaUser/> Account <BiChevronDown/></button>
         <Link to="/Favouritepage">
           <Primarybutton />
         </Link>
