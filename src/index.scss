@@ -71,6 +71,7 @@ $grey: rgb(232, 232, 232);
 
 body {
   font-family: "Montserrat", sans-serif;
+  position: relative;
 }
 
 .nav_list {
@@ -97,6 +98,9 @@ body {
 .desktop_nav {
   background-color: white;
   color: $dark_text;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
 .desktop_nav {
@@ -167,6 +171,7 @@ a:-webkit-any-link {
   text-align: start;
   font-size: 12px;
   position: relative;
+  cursor: pointer;
 }
 
 .love_icon {
@@ -604,7 +609,27 @@ input {
   }
 }
 
+
+.mobile_nav__btn__container{
+  display: flex;
+  flex-direction: column;
+  margin-top: -30px;
+  padding-left: 1rem;
+  gap: 2rem;
+}
+
+.desktop__nav__btn{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
 .login__btn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  justify-content: space-between;
   background-color: green;
   color: white;
   border: 0px;
@@ -612,16 +637,10 @@ input {
   padding: 10px;
   width: 105px;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 
-.nav__btn__container{
-  display: flex;
-  flex-direction: column;
-  margin-top: -30px;
-  padding-left: 1rem;
-  gap: 2rem;
-}
 
 @media screen and (min-width: 900px) {
   .Banner {
@@ -640,7 +659,6 @@ input {
 
   .desktop_nav {
     padding: 0.1rem 3rem;
-    background-color: red
   }
 
   .nav_list {

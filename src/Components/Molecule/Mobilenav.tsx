@@ -6,6 +6,8 @@ import cancel from "../../assets/images/x.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { Primarybutton } from "../Atom/Primarybutton";
+import { FaUser } from "react-icons/fa";
+import {BiChevronDown} from "react-icons/bi"
 
 export const MobileNav = () => {
   const [dropdown, setdropdown] = useState(false);
@@ -36,15 +38,17 @@ export const MobileNav = () => {
           ) : (
             <img src={cancel} onClick={handleDropdown} />
           )}
-          <button className="like_count">{likedno}</button>
+          {!dropdown && (
+            <button className="like_count">{likedno}</button>
+          )}
         </div>
       </nav>
       <section
         className={`mobile_link_container ${dropdown ? "active" : "inactive"}`}
       >
         <Navlist />
-<div className="nav__btn__container">
-<button className="login__btn">Log in</button>
+<div className="mobile_nav__btn__container">
+<button className="login__btn"><FaUser/> Account <BiChevronDown/></button>
         <Link to="/Favouritepage">
           <Primarybutton />
         </Link>
