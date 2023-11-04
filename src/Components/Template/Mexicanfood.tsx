@@ -25,7 +25,7 @@ export const Mexicanfood = () => {
     method: "GET",
     url: "https://the-mexican-food-db.p.rapidapi.com/",
     headers: {
-      // "X-RapidAPI-Key": "5312ed048amsh03ba71e9c5ebb31p10336djsnc538ae0495e9",
+      "X-RapidAPI-Key": "5312ed048amsh03ba71e9c5ebb31p10336djsnc538ae0495e9",
       "X-RapidAPI-Host": "the-mexican-food-db.p.rapidapi.com",
       // 2eb9578c9emsh80336b04e9b9b41p1b565ajsnec3d31f4b6b2
     },
