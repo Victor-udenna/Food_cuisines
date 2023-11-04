@@ -37,7 +37,7 @@ const [isauthdropdown, setAuthdropdown] = useState(false);
   <button className="login_btn">Log in</button>
   <hr></hr>
   <button className="signup_btn">Sign up</button>
-  <button className="login_btn"> Continue <AiOutlineGoogle/></button>
+  <button className="login_btn"> Continue  <AiOutlineGoogle/></button>
   </div>
 )}
 </div>
