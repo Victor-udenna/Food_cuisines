@@ -4,7 +4,8 @@ import Logo from "../Atom/Logo";
 import { Link } from "react-router-dom";
 import { Primarybutton } from "../Atom/Primarybutton";
 import { FaUser } from "react-icons/fa";
-import {BiChevronDown} from "react-icons/bi"
+import {BiChevronDown} from "react-icons/bi";
+import {AiOutlineGoogle} from "react-icons/ai";
 
  const Desktopnav = () => {
 
@@ -36,6 +37,7 @@ const [isauthdropdown, setAuthdropdown] = useState(false);
   <button className="login_btn">Log in</button>
   <hr></hr>
   <button className="signup_btn">Sign up</button>
+  <button className="login_btn"> Continue <AiOutlineGoogle/></button>
   </div>
 )}
 </div>
